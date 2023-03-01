@@ -1,0 +1,73 @@
+@import "variable";
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    width: 90vw;
+    margin-inline: auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h1{
+    font-size: $fs-title;
+}
+
+
+//Page colors
+#jet-black{
+    color: $clr-jetblack;
+}
+#jet-black-body{
+    background-color: $clr-white;
+}
+
+#space-gray{
+    color: $clr-spacegray;
+}
+#space-gray-body{
+    background-color: $clr-white;
+}
+
+#white{
+    color: $clr-white;
+}
+#white-body{
+    color: $clr-black;
+}
+
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left{
+        & ul{
+            font-size: $fs-very-small-text;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid $clr-black;
+}

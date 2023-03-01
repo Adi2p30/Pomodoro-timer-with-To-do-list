@@ -1,0 +1,14 @@
+
+//colors
+$clr-jetblack: #0A0A0A;
+$clr-spacegray: #343D46;
+$clr-white: #FFFFFF;
+$clr-black: #000000;
+
+//font-size
+$fs-title: clamp(1.25rem, -5.75rem + 140vw, 3rem);
+$fs-subtitle: clamp(0.9375rem, -5.8333rem + 166.6667vw, 2.5rem);
+$fs-large-text: clamp(0.625rem, -3.9583rem + 133.3333vw, 1.875rem);
+$fs-normal-text: clamp(0.625rem, -4.0625rem + 150vw, 1.5625rem);
+$fs-small-text: clamp(0.3125rem, -3.4375rem + 150vw, 1.25rem);
+$fs-very-small-text: clamp(0.3125rem, -0.3125rem + 100vw, 0.9375rem);
