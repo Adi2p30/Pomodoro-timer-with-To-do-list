@@ -1,73 +1,112 @@
 @import "variable";
 
-*, *::after, *::before{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-repeat: none;
+  background-size: cover;
 }
 
-.container{
-    width: 90vw;
-    margin-inline: auto;
+.container {
+  width: 90vw;
+  margin-inline: auto;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-h1{
-    font-size: $fs-title;
+h1 {
+  font-size: $fs-large-title;
 }
 
-
+h2 {
+  font-size: $fs-title;
+}
 //Page colors
-#jet-black{
-    color: $clr-jetblack;
+.jet-black-input {
+  border: none;
+  background: none;
+  border-bottom: 1px solid $clr-black;
 }
-#jet-black-body{
-    background-color: $clr-white;
+#jet-black {
+  color: $clr-jetblack;
 }
-
-#space-gray{
-    color: $clr-spacegray;
-}
-#space-gray-body{
-    background-color: $clr-white;
+#jet-black-body {
+  background-color: $clr-white;
 }
 
-#white{
-    color: $clr-white;
+#space-gray {
+  color: $clr-spacegray;
 }
-#white-body{
-    color: $clr-black;
+#space-gray-body {
+  background-color: $clr-light-gray;
+}
+.space-gray-input {
+  border: none;
+  background: none;
+  border-bottom: 1px solid $clr-spacegray;
 }
 
+#white {
+  color: $clr-white;
+}
+#white-body {
+  background-color: $clr-black;
+}
+.white-input {
+  border: none;
+  background: none;
+  border-bottom: 1px solid $clr-white;
+}
 
-.nav-bar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-    &__left{
-        & ul{
-            font-size: $fs-very-small-text;
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            gap: 1rem;
-        }
+  &__left {
+    & ul {
+      font-size: $fs-very-small-text;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+
+      @at-root .list-item:hover {
+        font-weight: $fw-bold;
+        cursor: pointer;
+      }
     }
+  }
 }
 
-input{
-    border: none;
-    border-bottom: 1px solid $clr-black;
+//header
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  & img {
+    max-width: 150px;
+    max-width: 150px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  body {
+    display: none;
+  }
 }
