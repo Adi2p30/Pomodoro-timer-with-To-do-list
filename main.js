@@ -6,3 +6,13 @@ urlBackgroundInput.addEventListener("input", () => {
     "background-image"
   ] = `url("${urlBackgroundInput.value}")`;
 });
+
+const hideNavBar = () =>{
+    document.querySelector("#nav-bar").style.display = "none";
+    document.querySelector(".open-nav-bar-button").style.display = "flex"
+}
+
+const openNavBar = () =>{
+  document.querySelector("#nav-bar").style.display = "flex"
+  document.querySelector(".open-nav-bar-button").style.display = "none"
+}

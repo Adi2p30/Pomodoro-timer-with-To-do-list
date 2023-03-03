@@ -6,50 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom-Pomodoro</title>
 
+    <!--Link to CSS-->
     <link rel="stylesheet" href="./stylesheets.css" />
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body id="jet-black-body">
     <header class="header">
       <div class="container">
-        <nav class="nav-bar">
+        <nav class="nav-bar" id="nav-bar">
           <div class="nav-bar__left">
+            <h2 id="jet-black" class="nav-bar-title">Custom Pomodoro</h2>
+          </div>
+          <div class="nav-bar__right">
             <ul>
               <li>
-                <a class="list-item" id="jet-black" onclick="hideNavBar()"
+                <a
+                  id="jet-black"
+                  onclick="hideNavBar()"
+                  style="-webkit-user-select: none"
                   >Hide nav-bar</a
                 >
               </li>
               <!-- <li><a onclick="openNavBar()">Open nav-bar</a></li>  Make a hide and dissapear upon open and hide and etc.-->
               <li>
-                <a class="list-item" id="jet-black" href="./index-white.html"
+                <a
+                  id="jet-black"
+                  href="./index-white.html"
+                  style="-webkit-user-select: none"
                   >Change color</a
                 >
               </li>
+              <li>
+                <label for="background-url-input" id="jet-black"
+                  >Background:</label
+                >
+                <input
+                  class="jet-black-input"
+                  id="background-url-input"
+                  type="url"
+                />
+              </li>
             </ul>
           </div>
-          <div class="nav-bar__middle">
-            <h2 id="jet-black" class="nav-bar-title">Custom Pomodoro</h1>
-          </div>
-          <div class="nav-bar__right">
-            <label for="background-url-input" id="jet-black">Background:</label>
-            <input
-              class="jet-black-input"
-              id="background-url-input"
-              type="url"
-            />
-          </div>
         </nav>
+        <div class="container">
+          <a
+            class="open-nav-bar-button"
+            onclick="openNavBar()"
+            style="-webkit-user-select: none; -webkit-user-drag: none"
+            ><img src="./Control-images/down-arrow-jet-black.png" alt=""
+          /></a>
+        </div>
         <header class="container">
           <div class="header-container">
             <div class="header-container__left">
-              <img src="./Control-images/Reset-jetblack.png" alt="">
+              <img src="./Control-images/Reset-jetblack.png" alt="" />
             </div>
             <div class="header-container__middle">
-              <h1 id="timer">00:00</h1>
+              <h1
+                class="jet-black"
+                id="timer"
+                style="-webkit-user-select: none"
+              >
+                00:00
+              </h1>
             </div>
             <div class="header-container__right">
-              <img src="./Control-images/Play-jetblack.png" alt="">
+              <img src="./Control-images/Play-jetblack.png" alt="" />
             </div>
           </div>
         </header>

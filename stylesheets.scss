@@ -21,6 +21,15 @@ body {
   margin-inline: auto;
 }
 
+.open-nav-bar-button{
+    display: none;
+    justify-content: center;
+    padding: 1rem;
+    & img:hover{
+        zoom: 120%;
+    }
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -28,19 +37,25 @@ a {
 
 h1 {
   font-size: $fs-large-title;
+  font-family: 'Mochiy Pop One', sans-serif;
 }
 
 h2 {
   font-size: $fs-title;
 }
+
 //Page colors
 .jet-black-input {
+  color: $clr-jetblack;
   border: none;
   background: none;
-  border-bottom: 1px solid $clr-black;
+  border-bottom: 1px solid $clr-jetblack;
 }
 #jet-black {
   color: $clr-jetblack;
+}
+.jet-black{
+    color: $clr-jetblack;
 }
 #jet-black-body {
   background-color: $clr-white;
@@ -49,10 +64,14 @@ h2 {
 #space-gray {
   color: $clr-spacegray;
 }
+.space-gray {
+    color: $clr-spacegray;
+  }
 #space-gray-body {
   background-color: $clr-light-gray;
 }
 .space-gray-input {
+  color: $clr-spacegray;
   border: none;
   background: none;
   border-bottom: 1px solid $clr-spacegray;
@@ -61,10 +80,14 @@ h2 {
 #white {
   color: $clr-white;
 }
+.white {
+    color: $clr-white;
+  }
 #white-body {
   background-color: $clr-black;
 }
 .white-input {
+  color: $clr-white;
   border: none;
   background: none;
   border-bottom: 1px solid $clr-white;
@@ -76,13 +99,13 @@ h2 {
   justify-content: space-between;
   align-items: center;
 
-  &__left {
+  &__right {
     & ul {
       font-size: $fs-very-small-text;
       list-style: none;
       display: flex;
       flex-direction: row;
-      gap: 1rem;
+      gap: 2rem;
 
       @at-root .list-item:hover {
         font-weight: $fw-bold;
@@ -102,8 +125,16 @@ h2 {
   & img {
     max-width: 150px;
     max-width: 150px;
+
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
   }
 }
+
+
 
 @media only screen and (max-width: 950px) {
   body {

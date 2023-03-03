@@ -19,13 +19,23 @@ body {
   margin-inline: auto;
 }
 
+.open-nav-bar-button {
+  display: none;
+  justify-content: center;
+  padding: 1rem;
+}
+.open-nav-bar-button img:hover {
+  zoom: 120%;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
 h1 {
-  font-size: clamp(11.25rem, 8.125rem + 50vw, 12.5rem);
+  font-size: clamp(10.25rem, 7.125rem + 40vw, 11.5rem);
+  font-family: "Mochiy Pop One", sans-serif;
 }
 
 h2 {
@@ -33,12 +43,17 @@ h2 {
 }
 
 .jet-black-input {
+  color: #0a0a0a;
   border: none;
   background: none;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #0a0a0a;
 }
 
 #jet-black {
+  color: #0a0a0a;
+}
+
+.jet-black {
   color: #0a0a0a;
 }
 
@@ -50,11 +65,16 @@ h2 {
   color: #343d46;
 }
 
+.space-gray {
+  color: #343d46;
+}
+
 #space-gray-body {
   background-color: #d3d3d3;
 }
 
 .space-gray-input {
+  color: #343d46;
   border: none;
   background: none;
   border-bottom: 1px solid #343d46;
@@ -64,11 +84,16 @@ h2 {
   color: #ffffff;
 }
 
+.white {
+  color: #ffffff;
+}
+
 #white-body {
   background-color: #000000;
 }
 
 .white-input {
+  color: #ffffff;
   border: none;
   background: none;
   border-bottom: 1px solid #ffffff;
@@ -80,12 +105,12 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
-.nav-bar__left ul {
+.nav-bar__right ul {
   font-size: clamp(0.3125rem, -0.3125rem + 100vw, 0.9375rem);
   list-style: none;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
 }
 .list-item:hover {
   font-weight: 700;
@@ -100,6 +125,11 @@ h2 {
 .header-container img {
   max-width: 150px;
   max-width: 150px;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }
 
 @media only screen and (max-width: 950px) {
