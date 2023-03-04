@@ -1,4 +1,6 @@
 @import "variable";
+@import "page-color-custimization";
+@import "mixins";
 
 *,
 *::after,
@@ -21,15 +23,6 @@ body {
   margin-inline: auto;
 }
 
-.open-nav-bar-button{
-    display: none;
-    justify-content: center;
-    padding: 1rem;
-    & img:hover{
-        zoom: 120%;
-    }
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -44,60 +37,22 @@ h2 {
   font-size: $fs-title;
 }
 
-//Page colors
-.jet-black-input {
-  color: $clr-jetblack;
-  border: none;
-  background: none;
-  border-bottom: 1px solid $clr-jetblack;
-}
-#jet-black {
-  color: $clr-jetblack;
-}
-.jet-black{
-    color: $clr-jetblack;
-}
-#jet-black-body {
-  background-color: $clr-white;
-}
-
-#space-gray {
-  color: $clr-spacegray;
-}
-.space-gray {
-    color: $clr-spacegray;
-  }
-#space-gray-body {
-  background-color: $clr-light-gray;
-}
-.space-gray-input {
-  color: $clr-spacegray;
-  border: none;
-  background: none;
-  border-bottom: 1px solid $clr-spacegray;
-}
-
-#white {
-  color: $clr-white;
-}
-.white {
-    color: $clr-white;
-  }
-#white-body {
-  background-color: $clr-black;
-}
-.white-input {
-  color: $clr-white;
-  border: none;
-  background: none;
-  border-bottom: 1px solid $clr-white;
-}
+//Navbar
 
 .nav-bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  &__items{
+    opacity: 0.7;
+    @include disable-drag;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
 
   &__right {
     & ul {
@@ -106,7 +61,7 @@ h2 {
       display: flex;
       flex-direction: row;
       gap: 2rem;
-
+      
       @at-root .list-item:hover {
         font-weight: $fw-bold;
         cursor: pointer;
@@ -115,23 +70,39 @@ h2 {
   }
 }
 
-//header
+.open-nav-bar-button{
+    display: none;
+    justify-content: center;
+    padding: 1rem;
+    & img:hover{
+        zoom: 120%;
+    }
+}
 
+//header
 .header-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 2rem;
 
   & img {
     max-width: 150px;
     max-width: 150px;
+    opacity: 0.5;
 
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
+    @include disable-drag;
+
+    &:hover{
+      opacity: 1;
+    }
   }
+
+    &__middle{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
 }
 
 

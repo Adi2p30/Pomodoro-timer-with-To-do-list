@@ -28,10 +28,7 @@
           <div class="nav-bar__right">
             <ul>
               <li>
-                <a
-                  id="jet-black"
-                  onclick="hideNavBar()"
-                  style="-webkit-user-select: none"
+                <a id="jet-black" onclick="hideNavBar()" class="nav-bar__items"
                   >Hide nav-bar</a
                 >
               </li>
@@ -40,7 +37,7 @@
                 <a
                   id="jet-black"
                   href="./index-white.html"
-                  style="-webkit-user-select: none"
+                  class="nav-bar__items"
                   >Change color</a
                 >
               </li>
@@ -71,13 +68,23 @@
               <img src="./Control-images/Reset-jetblack.png" alt="" />
             </div>
             <div class="header-container__middle">
-              <h1
-                class="jet-black"
-                id="timer"
-                style="-webkit-user-select: none"
-              >
-                00:00
-              </h1>
+              <input
+                class="timer-input-jet-black"
+                id="timer-number-min"
+                placeholder="00"
+                size="90"
+                type="text"
+                maxlength="2"
+              />
+              <h2 id="jet-black">:</h2>
+              <input
+                class="timer-input-jet-black"
+                id="timer-number-sec"
+                placeholder="00"
+                size="90"
+                type="text"
+                maxlength="2"
+              />
             </div>
             <div class="header-container__right">
               <img src="./Control-images/Play-jetblack.png" alt="" />
