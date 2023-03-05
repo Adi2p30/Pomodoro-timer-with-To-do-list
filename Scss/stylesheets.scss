@@ -35,6 +35,12 @@ h1 {
 
 h2 {
   font-size: $fs-title;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h3 {
+  font-size: $fs-large-text;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 //Navbar
@@ -70,18 +76,27 @@ h2 {
   }
 }
 
+.open-nav-bar-container{
+  display: flex;
+  justify-content: center;
+}
+
 .open-nav-bar-button{
     display: none;
-    justify-content: center;
+    justify-self: center;
     padding: 1rem;
-    opacity: 0.5;
+    max-width: 5rem;
+    
+    & img {
+      opacity: 0.4;
+    }
     & img:hover{
-        zoom: 120%;
         opacity: 1;
+        zoom: 110%;
     }
 }
 
-//header
+//timer-section
 .header-container {
   display: flex;
   justify-content: space-around;
@@ -91,7 +106,7 @@ h2 {
   & img {
     max-width: 150px;
     max-width: 150px;
-    opacity: 0.5;
+    opacity: 0.4;
 
     @include disable-drag;
 
@@ -107,10 +122,26 @@ h2 {
     }
 }
 
-
+//Tasklist-section
+.tasklist-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.tasklist-title{
+  margin-top: 1rem;
+}
+.tasklist-tasks{
+  margin-top: 2rem;
+}
+.tasklist-item{
+  text-decoration: none;
+}
 
 @media only screen and (max-width: 950px) {
   body {
     display: none;
   }
 }
+

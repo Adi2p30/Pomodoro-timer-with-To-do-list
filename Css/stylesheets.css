@@ -24,6 +24,18 @@
   max-width: 13.25rem;
   color: #0a0a0a;
   text-align: center;
+  opacity: 0.4;
+}
+
+.tasklist-input-jetblack {
+  border: none;
+  background: none;
+  font-size: clamp(0.3125rem, -0.3125rem + 100vw, 0.9375rem);
+  min-width: 90vw;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  color: #0a0a0a;
+  text-align: center;
 }
 
 #space-gray {
@@ -52,6 +64,18 @@
   max-width: 13.25rem;
   color: #343d46;
   text-align: center;
+  opacity: 0.4;
+}
+
+.tasklist-input-spacegray {
+  border: none;
+  background: none;
+  font-size: clamp(0.3125rem, -0.3125rem + 100vw, 0.9375rem);
+  min-width: 90vw;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  color: #343d46;
+  text-align: center;
 }
 
 #white {
@@ -78,6 +102,18 @@
   background: none;
   font-size: clamp(10.25rem, 7.125rem + 40vw, 11.5rem);
   max-width: 13.25rem;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0.4;
+}
+
+.tasklist-input-white {
+  border: none;
+  background: none;
+  font-size: clamp(0.3125rem, -0.3125rem + 100vw, 0.9375rem);
+  min-width: 90vw;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   color: #ffffff;
   text-align: center;
 }
@@ -115,6 +151,12 @@ h1 {
 
 h2 {
   font-size: clamp(1.25rem, -5.75rem + 140vw, 3rem);
+  font-family: "Courier New", Courier, monospace;
+}
+
+h3 {
+  font-size: clamp(0.625rem, -3.9583rem + 133.3333vw, 1.875rem);
+  font-family: "Courier New", Courier, monospace;
 }
 
 .nav-bar {
@@ -146,15 +188,23 @@ h2 {
   cursor: pointer;
 }
 
+.open-nav-bar-container {
+  display: flex;
+  justify-content: center;
+}
+
 .open-nav-bar-button {
   display: none;
-  justify-content: center;
+  justify-self: center;
   padding: 1rem;
-  opacity: 0.5;
+  max-width: 5rem;
+}
+.open-nav-bar-button img {
+  opacity: 0.4;
 }
 .open-nav-bar-button img:hover {
-  zoom: 120%;
   opacity: 1;
+  zoom: 110%;
 }
 
 .header-container {
@@ -166,7 +216,7 @@ h2 {
 .header-container img {
   max-width: 150px;
   max-width: 150px;
-  opacity: 0.5;
+  opacity: 0.4;
   -webkit-user-select: none;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -180,6 +230,25 @@ h2 {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.tasklist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tasklist-title {
+  margin-top: 1rem;
+}
+
+.tasklist-tasks {
+  margin-top: 2rem;
+}
+
+.tasklist-item {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 950px) {

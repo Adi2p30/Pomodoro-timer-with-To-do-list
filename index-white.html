@@ -25,6 +25,7 @@
           <div class="nav-bar__left">
             <h2 id="white" class="nav-bar-title">Custom Pomodoro</h2>
           </div>
+
           <div class="nav-bar__right">
             <ul>
               <li>
@@ -52,16 +53,20 @@
             </ul>
           </div>
         </nav>
+
         <div class="container">
-          <a
-            class="open-nav-bar-button"
-            id="white"
-            onclick="openNavBar()"
-            style="-webkit-user-select: none; -webkit-user-drag: none"
-            ><img src="./Control-images/down-arrow-white.png" alt=""
-          /></a>
+          <div class="open-nav-bar-container">
+            <a
+              class="open-nav-bar-button"
+              id="white"
+              onclick="openNavBar()"
+              style="-webkit-user-select: none; -webkit-user-drag: none"
+              ><img src="./Control-images/down-arrow-white.png" alt=""
+            /></a>
+          </div>
         </div>
-        <header class="container">
+
+        <section class="timer-and-controls-section">
           <div class="header-container">
             <div class="header-container__left">
               <img src="./Control-images/Reset-white.png" alt="" />
@@ -89,7 +94,25 @@
               <img src="./Control-images/Play-white.png" alt="" />
             </div>
           </div>
-        </header>
+        </section>
+
+        <section class="tasklist-section">
+          <div class="tasklist-container">
+            <div class="tasklist-title">
+              <h3 class="white">To do list</h3>
+            </div>
+            <div class="tasklist-tasks">
+              <input
+                maxlength="175"
+                id="tasklist-item"
+                placeholder="Take out the dog...."
+                class="tasklist-input-white"
+                type="text"
+              />
+              <!--SO for this input thing, when you press the enter key, Using js take the value and then make a new task in another thing and then merge the kids-->
+            </div>
+          </div>
+        </section>
       </div>
     </header>
   </body>
