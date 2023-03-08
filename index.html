@@ -18,36 +18,33 @@
     />
   </head>
 
-  <body id="space-gray-body">
+  <body id="body">
     <header class="header">
       <div class="container">
         <nav class="nav-bar" id="nav-bar">
           <div class="nav-bar__left">
-            <h2 id="space-gray" class="nav-bar-title">Custom Pomodoro</h2>
+            <h2 class="nav-bar-title jet-black">Custom Pomodoro</h2>
           </div>
 
           <div class="nav-bar__right">
             <ul>
               <li>
-                <a id="space-gray" onclick="hideNavBar()" class="nav-bar__items"
+                <a onclick="hideNavBar()" class="nav-bar__items jet-black"
                   >Hide nav-bar</a
                 >
               </li>
               <!-- <li><a onclick="openNavBar()">Open nav-bar</a></li>  Make a hide and dissapear upon open and hide and etc.-->
               <li>
-                <a
-                  id="space-gray"
-                  href="./index-jet-black.html"
-                  class="nav-bar__items"
+                <a onclick="colorChange()" class="nav-bar__items button"
                   >Change color</a
                 >
               </li>
               <li>
-                <label for="background-url-input" id="space-gray"
+                <label for="background-url-input" class="jet-black"
                   >Background:</label
                 >
                 <input
-                  class="space-gray-input"
+                  class="jet-black-input"
                   id="background-url-input"
                   type="url"
                 />
@@ -60,10 +57,10 @@
           <div class="open-nav-bar-container">
             <a
               class="open-nav-bar-button"
-              id="space-gray"
+              id="jet-black"
               onclick="openNavBar()"
               style="-webkit-user-select: none; -webkit-user-drag: none"
-              ><img src="./Control-images/down-arrow-space-gray.png" alt=""
+              ><img src="./Control-images/down-arrow-jet-black.png" alt=""
             /></a>
           </div>
         </div>
@@ -71,20 +68,24 @@
         <section>
           <div class="header-container">
             <div class="header-container__left">
-              <img src="./Control-images/Reset-spacegray.png" alt="" />
+              <img
+                id="reset"
+                src="./Control-images/Reset-jetblack.png"
+                alt=""
+              />
             </div>
             <div class="header-container__middle">
               <input
-                class="timer-input-space-gray"
+                class="timer-input-jet-black"
                 id="timer-number-min"
                 placeholder="00"
                 size="90"
                 type="text"
                 maxlength="2"
               />
-              <h2 id="space-gray">:</h2>
+              <h2 class="jet-black">:</h2>
               <input
-                class="timer-input-space-gray"
+                class="timer-input-jet-black"
                 id="timer-number-sec"
                 placeholder="00"
                 size="90"
@@ -94,13 +95,15 @@
             </div>
             <div class="header-container__right">
               <img
+                id="start"
                 style="display: block"
-                src="./Control-images/Play-spacegray.png"
+                src="./Control-images/Play-jetblack.png"
                 alt=""
               />
               <img
+                id="pause"
                 style="display: none"
-                src="./Control-images/Pause-spacegray.png"
+                src="./Control-images/Pause-jetblack.png"
                 alt=""
               />
             </div>
@@ -109,14 +112,14 @@
         <section class="tasklist-section">
           <div class="tasklist-container">
             <div class="tasklist-title">
-              <h3 class="space-gray">To do list</h3>
+              <h3 class="jet-black">To do list</h3>
             </div>
             <div class="tasklist-tasks">
               <input
                 maxlength="175"
                 id="tasklist-item"
                 placeholder="Take out the dog...."
-                class="tasklist-input-spacegray"
+                class="tasklist-input-jetblack"
                 type="text"
               />
               <!--SO for this input thing, when you press the enter key, Using js take the value and then make a new task in another thing and then merge the kids-->
@@ -127,4 +130,5 @@
     </header>
   </body>
 </html>
-<script src="./Js/main.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/color-change.js"></script>

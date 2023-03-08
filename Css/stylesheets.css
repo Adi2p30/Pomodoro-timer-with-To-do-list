@@ -1,13 +1,5 @@
-#jet-black {
-  color: #0a0a0a;
-}
-
 .jet-black {
   color: #0a0a0a;
-}
-
-#jet-black-body {
-  background-color: #ffffff;
 }
 
 .jet-black-input {
@@ -38,16 +30,8 @@
   text-align: center;
 }
 
-#space-gray {
-  color: #343d46;
-}
-
 .space-gray {
   color: #343d46;
-}
-
-#space-gray-body {
-  background-color: #d3d3d3;
 }
 
 .space-gray-input {
@@ -78,16 +62,8 @@
   text-align: center;
 }
 
-#white {
-  color: #ffffff;
-}
-
 .white {
   color: #ffffff;
-}
-
-#white-body {
-  background-color: #000000;
 }
 
 .white-input {

@@ -1,14 +1,8 @@
 
 
 //Page colors
-#jet-black {
-    color: $clr-jetblack;
-}
 .jet-black{
     color: $clr-jetblack;
-}
-#jet-black-body {
-    background-color: $clr-white;
 }
 .jet-black-input {
     color: $clr-jetblack;
@@ -36,16 +30,9 @@
 }
 
 
-
-#space-gray {
-    color: $clr-spacegray;
-}
 .space-gray {
     color: $clr-spacegray;
     }
-#space-gray-body {
-    background-color: $clr-light-gray;
-}
 .space-gray-input {
     color: $clr-spacegray;
     border: none;
@@ -73,14 +60,8 @@
 
 
 
-#white {
-    color: $clr-white;
-}
 .white {
     color: $clr-white;
-}
-#white-body {
-    background-color: $clr-black;
 }
 .white-input {
     color: $clr-white;

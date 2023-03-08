@@ -4,7 +4,10 @@ urlBackgroundInput.addEventListener("input", () => {
   document.body.style[
     "background-image"
   ] = `url("${urlBackgroundInput.value}")`;
+  urlBackgroundInput.value = "";
 });
+
+
 
 const hideNavBar = () =>{
     document.querySelector("#nav-bar").style.display = "none";
