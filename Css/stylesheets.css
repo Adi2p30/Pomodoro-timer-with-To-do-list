@@ -204,7 +204,7 @@ h3 {
   max-width: 500px;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  text-align: center;
+  text-align: end;
 }
 
 .tasklist-add {
@@ -236,6 +236,10 @@ h3 {
   min-width: 10%;
   max-width: 100%;
   text-align: center;
+}
+
+.createtask-button {
+  margin-right: 225px;
 }
 
 @media only screen and (max-width: 950px) {
