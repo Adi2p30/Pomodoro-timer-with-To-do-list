@@ -19,17 +19,6 @@
   opacity: 0.4;
 }
 
-.tasklist-input-jetblack {
-  border: none;
-  background: none;
-  font-size: clamp(0.3125rem, -0.3125rem + 100vw, 0.9375rem);
-  min-width: 90vw;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
-  color: #0a0a0a;
-  text-align: center;
-}
-
 .space-gray {
   color: #343d46;
 }
@@ -51,17 +40,6 @@
   opacity: 0.4;
 }
 
-.tasklist-input-spacegray {
-  border: none;
-  background: none;
-  font-size: clamp(0.3125rem, -0.3125rem + 100vw, 0.9375rem);
-  min-width: 90vw;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
-  color: #343d46;
-  text-align: center;
-}
-
 .white {
   color: #ffffff;
 }
@@ -81,17 +59,6 @@
   color: #ffffff;
   text-align: center;
   opacity: 0.4;
-}
-
-.tasklist-input-white {
-  border: none;
-  background: none;
-  font-size: clamp(0.3125rem, -0.3125rem + 100vw, 0.9375rem);
-  min-width: 90vw;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
-  color: #ffffff;
-  text-align: center;
 }
 
 *,
@@ -208,7 +175,7 @@ h3 {
   align-items: center;
 }
 
-.tasklist-container {
+.tasklist-title-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,12 +186,56 @@ h3 {
   margin-top: 1rem;
 }
 
-.tasklist-tasks {
-  margin-top: 2rem;
-}
-
 .tasklist-item {
   text-decoration: none;
+}
+
+.tasklist-input-container {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.tasklist-input {
+  border: none;
+  background: none;
+  font-size: clamp(0.3125rem, -0.3125rem + 100vw, 0.9375rem);
+  min-width: 20rem;
+  max-width: 500px;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  text-align: center;
+}
+
+.tasklist-add {
+  text-align: center;
+  font-weight: 700;
+  background-color: #ffffff;
+  border: none;
+  color: #0a0a0a;
+}
+.tasklist-add:hover {
+  text-decoration: underline;
+}
+
+.tasklist-container {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  width: 100%;
+}
+
+.tasklist.ul {
+  display: flex;
+  justify-content: center;
+}
+
+.tasklist-li {
+  list-style-type: none;
+  padding: 0.2rem;
+  min-width: 10%;
+  max-width: 100%;
+  text-align: center;
 }
 
 @media only screen and (max-width: 950px) {

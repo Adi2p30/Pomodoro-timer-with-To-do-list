@@ -122,7 +122,7 @@ h3 {
 }
 
 //Tasklist-section
-.tasklist-container{
+.tasklist-title-container{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,11 +131,51 @@ h3 {
 .tasklist-title{
   margin-top: 1rem;
 }
-.tasklist-tasks{
-  margin-top: 2rem;
-}
 .tasklist-item{
   text-decoration: none;
+}
+.tasklist-input-container{
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.tasklist-input{
+  border: none;
+  background: none;
+  font-size: $fs-very-small-text;
+  min-width: 20rem;
+  max-width: 500px;
+  min-height: fit-content;
+  text-align: center;
+}
+.tasklist-add{
+  text-align: center;
+  font-weight: $fw-bold ;
+  background-color: $clr-white;
+  border: none;
+  color: $clr-jetblack;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+.tasklist-container{
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  width: 100%;
+}
+.tasklist.ul{
+  display: flex;
+  justify-content: center;
+}
+.tasklist-li{
+  list-style-type: none;
+  padding: 0.2rem;
+  min-width: 10%;
+  max-width: 100%;
+  text-align: center;
+
+
 }
 
 @media only screen and (max-width: 950px) {

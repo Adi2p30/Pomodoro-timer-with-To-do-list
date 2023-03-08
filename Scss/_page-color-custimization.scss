@@ -19,16 +19,6 @@
     text-align: center;
     opacity: 0.4;
 }
-.tasklist-input-jetblack{
-    border: none;
-    background: none;
-    font-size: $fs-very-small-text;
-    min-width: 90vw;
-    min-height: fit-content;
-    color: $clr-jetblack;
-    text-align: center;
-}
-
 
 .space-gray {
     color: $clr-spacegray;
@@ -48,16 +38,6 @@
     text-align: center;
     opacity: 0.4;
 }
-.tasklist-input-spacegray{
-    border: none;
-    background: none;
-    font-size: $fs-very-small-text;
-    min-width: 90vw;
-    min-height: fit-content;
-    color: $clr-spacegray;
-    text-align: center;
-}
-
 
 
 .white {
@@ -77,13 +57,5 @@
     color: $clr-white;
     text-align: center;
     opacity: 0.4;
-}
-.tasklist-input-white{
-    border: none;
-    background: none;
-    font-size: $fs-very-small-text;
-    min-width: 90vw;
-    min-height: fit-content;
-    color: $clr-white;
-    text-align: center;
+    
 }

@@ -110,19 +110,22 @@
           </div>
         </section>
         <section class="tasklist-section">
-          <div class="tasklist-container">
+          <div class="tasklist-title-container">
             <div class="tasklist-title">
               <h3 class="jet-black">To do list</h3>
             </div>
-            <div class="tasklist-tasks">
+            <div class="tasklist-input-container">
               <input
                 maxlength="175"
                 id="tasklist-item"
                 placeholder="Take out the dog...."
-                class="tasklist-input-jetblack"
+                class="tasklist-input jet-black"
                 type="text"
               />
-              <!--SO for this input thing, when you press the enter key, Using js take the value and then make a new task in another thing and then merge the kids-->
+              <button onclick="createTask()">ADD</button>
+            </div>
+            <div id="tasklist-container" class="tasklist-container">
+              <ul id="tasklist-ul" class="tasklist-ul"></ul>
             </div>
           </div>
         </section>
@@ -132,3 +135,4 @@
 </html>
 <script src="./js/main.js"></script>
 <script src="./js/color-change.js"></script>
+<script src="./js/task-list.js"></script>
