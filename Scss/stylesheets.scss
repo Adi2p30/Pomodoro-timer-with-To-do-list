@@ -30,17 +30,21 @@ a {
 
 h1 {
   font-size: $fs-large-title;
-  font-family: 'Mochiy Pop One', sans-serif;
+  font-family: "Mochiy Pop One", sans-serif;
 }
 
 h2 {
   font-size: $fs-title;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 h3 {
   font-size: $fs-large-text;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.color {
+  color: $clr-jetblack;
 }
 //Navbar
 
@@ -50,11 +54,11 @@ h3 {
   justify-content: space-between;
   align-items: center;
 
-  &__items{
+  &__items {
     opacity: 0.7;
     @include disable-drag;
 
-    &:hover{
+    &:hover {
       opacity: 1;
     }
   }
@@ -66,7 +70,7 @@ h3 {
       display: flex;
       flex-direction: row;
       gap: 2rem;
-      
+
       @at-root .list-item:hover {
         font-weight: $fw-bold;
         cursor: pointer;
@@ -75,24 +79,24 @@ h3 {
   }
 }
 
-.open-nav-bar-container{
+.open-nav-bar-container {
   display: flex;
   justify-content: center;
 }
 
-.open-nav-bar-button{
-    display: none;
-    justify-self: center;
-    padding: 1rem;
-    max-width: 5rem;
-    
-    & img {
-      opacity: 0.4;
-    }
-    & img:hover{
-        opacity: 1;
-        zoom: 110%;
-    }
+.open-nav-bar-button {
+  display: none;
+  justify-self: center;
+  padding: 1rem;
+  max-width: 5rem;
+
+  & img {
+    opacity: 0.4;
+  }
+  & img:hover {
+    opacity: 1;
+    zoom: 110%;
+  }
 }
 
 //timer-section
@@ -109,37 +113,37 @@ h3 {
 
     @include disable-drag;
 
-    &:hover{
+    &:hover {
       opacity: 1;
     }
   }
 
-    &__middle{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
+  &__middle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 //Tasklist-section
-.tasklist-title-container{
+.tasklist-title-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.tasklist-title{
+.tasklist-title {
   margin-top: 1rem;
 }
-.tasklist-item{
+.tasklist-item {
   text-decoration: none;
 }
-.tasklist-input-container{
+.tasklist-input-container {
   margin-top: 2rem;
   display: flex;
   gap: 1rem;
 }
-.tasklist-input{
+.tasklist-input {
   border: none;
   background: none;
   font-size: $fs-very-small-text;
@@ -148,40 +152,48 @@ h3 {
   min-height: fit-content;
   text-align: end;
 }
-.tasklist-add{
+.createtask-button {
   text-align: center;
-  font-weight: $fw-bold ;
-  background-color: $clr-white;
+  font-weight: $fw-bold;
+  background: none;
   border: none;
-  color: $clr-jetblack;
-  &:hover{
-    text-decoration: underline;
+  margin-right: 225px;
+  opacity: 0.4;
+  &:hover {
+    opacity: 1;
   }
 }
-.tasklist-container{
+.tasklist-container {
   display: flex;
   flex-direction: column;
   height: inherit;
   width: 100%;
 }
-.tasklist.ul{
+.tasklist.ul {
   display: flex;
   justify-content: center;
 }
-.tasklist-li{
+.tasklist-li {
   list-style-type: none;
   padding: 0.2rem;
   min-width: 10%;
   max-width: 100%;
   text-align: center;
 }
-.createtask-button{
-  margin-right: 225px;
+.timer-input {
+  border: none;
+  background: none;
+  font-size: $fs-large-title;
+  max-width: 13.25rem;
+  text-align: center;
+  opacity: 0.4;
 }
 
+input {
+  background: none;
+}
 @media only screen and (max-width: 950px) {
   body {
     display: none;
   }
 }
-

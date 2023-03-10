@@ -23,31 +23,27 @@
       <div class="container">
         <nav class="nav-bar" id="nav-bar">
           <div class="nav-bar__left">
-            <h2 class="nav-bar-title jet-black">Custom Pomodoro</h2>
+            <h2 class="nav-bar-title color">Custom Pomodoro</h2>
           </div>
 
           <div class="nav-bar__right">
             <ul>
               <li>
-                <a onclick="hideNavBar()" class="nav-bar__items jet-black"
+                <a onclick="hideNavBar()" class="nav-bar__items jet-black color"
                   >Hide nav-bar</a
                 >
               </li>
               <!-- <li><a onclick="openNavBar()">Open nav-bar</a></li>  Make a hide and dissapear upon open and hide and etc.-->
               <li>
-                <a onclick="colorChange()" class="nav-bar__items button"
+                <a onclick="colorChange()" class="nav-bar__items button color"
                   >Change color</a
                 >
               </li>
               <li>
-                <label for="background-url-input" class="jet-black"
+                <label for="background-url-input" class="color"
                   >Background:</label
                 >
-                <input
-                  class="jet-black-input"
-                  id="background-url-input"
-                  type="url"
-                />
+                <input class="input" id="background-url-input" type="url" />
               </li>
             </ul>
           </div>
@@ -76,7 +72,7 @@
             </div>
             <div class="header-container__middle">
               <input
-                class="timer-input-jet-black"
+                class="timer-input color"
                 id="timer-number-min"
                 placeholder="00"
                 size="90"
@@ -85,7 +81,7 @@
               />
               <h2 class="jet-black">:</h2>
               <input
-                class="timer-input-jet-black"
+                class="timer-input color"
                 id="timer-number-sec"
                 placeholder="00"
                 size="90"
@@ -112,17 +108,17 @@
         <section class="tasklist-section">
           <div class="tasklist-title-container">
             <div class="tasklist-title">
-              <h3 class="jet-black">To do list</h3>
+              <h3 class="color">To do list</h3>
             </div>
             <div class="tasklist-input-container">
               <input
                 maxlength="175"
                 id="tasklist-item"
                 placeholder="Write a task!"
-                class="tasklist-input jet-black"
+                class="tasklist-input color"
                 type="text"
               />
-              <button class="createtask-button" onclick="createTask()">
+              <button class="createtask-button color" onclick="createTask()">
                 ADD
               </button>
             </div>
