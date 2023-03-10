@@ -8,6 +8,7 @@ function colorChange() {
     document.getElementById("reset").src = "./Control-images/Reset-white.png";
     document.getElementById("start").src = "./Control-images/Play-white.png";
     document.getElementById("pause").src = "./Control-images/Pause-white.png";
+    document.getElementById("nav-open-button").src = "./Control-images/down-arrow-white.png"
     document
       .querySelectorAll(".color")
       .forEach((el) => (el.style.color = "#FFFFFF"));
@@ -21,6 +22,7 @@ function colorChange() {
       "./Control-images/Play-spacegray.png";
     document.getElementById("pause").src =
       "./Control-images/Pause-spacegray.png";
+      document.getElementById("nav-open-button").src = "./Control-images/down-arrow-spacegray.png"
     document
       .querySelectorAll(".color")
       .forEach((el) => (el.style.color = "#343d46"));
@@ -33,6 +35,7 @@ function colorChange() {
     document.getElementById("start").src = "./Control-images/Play-jetblack.png";
     document.getElementById("pause").src =
       "./Control-images/Pause-jetblack.png";
+      document.getElementById("nav-open-button").src = "./Control-images/down-arrow-jetblack.png"
     document
       .querySelectorAll("color")
       .forEach((el) => (el.style.color = "#0a0a0a"));
