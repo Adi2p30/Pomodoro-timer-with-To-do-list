@@ -41,12 +41,12 @@ h1 {
 
 h2 {
   font-size: clamp(1.25rem, -5.75rem + 140vw, 3rem);
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Tilt Warp", cursive;
 }
 
 h3 {
   font-size: clamp(0.625rem, -3.9583rem + 133.3333vw, 1.875rem);
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Tilt Warp", cursive;
 }
 
 .color {
@@ -189,6 +189,7 @@ h3 {
   min-width: 10%;
   max-width: 100%;
   font-weight: 700;
+  font-family: "Tilt Warp", cursive;
   text-align: center;
 }
 
@@ -212,7 +213,8 @@ input {
   padding: 1rem;
 }
 .credits-text__pre {
-  opacity: 0.5;
+  opacity: 1;
+  font-size: clamp(0.3125rem, -0.625rem + 100vw, 0.625rem);
 }
 
 @media only screen and (max-width: 950px) {

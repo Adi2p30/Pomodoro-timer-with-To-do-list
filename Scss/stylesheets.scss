@@ -35,12 +35,12 @@ h1 {
 
 h2 {
   font-size: $fs-title;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Tilt Warp', cursive;
 }
 
 h3 {
   font-size: $fs-large-text;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Tilt Warp', cursive;
 }
 
 .color {
@@ -180,6 +180,7 @@ h3 {
   min-width: 10%;
   max-width: 100%;
   font-weight: $fw-bold;
+  font-family: 'Tilt Warp', cursive;
   text-align: center;
 }
 .timer-input {
@@ -201,7 +202,8 @@ input {
   justify-content: center;
   padding: 1rem;
   &__pre{
-    opacity: 0.5;
+    opacity: 1;
+    font-size: $fs-credits-text ;
   }
 }
 
