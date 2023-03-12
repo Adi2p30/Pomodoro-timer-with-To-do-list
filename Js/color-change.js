@@ -1,6 +1,12 @@
+
 let num = 1;
 const button = document.querySelector(".button");
 button.addEventListener("click", colorChange);
+
+let color = "#0a0a0a";
+
+
+
 
 function colorChange() {
   if (num === 1) {
@@ -12,8 +18,8 @@ function colorChange() {
     document
       .querySelectorAll(".color")
       .forEach((el) => (el.style.color = "#FFFFFF"));
-
     num = num + 1;
+    color = "#FFFFFF";
   } else if (num === 2) {
     document.getElementById("body").style.backgroundColor = "#d3d3d3";
     document.getElementById("reset").src =
@@ -28,6 +34,7 @@ function colorChange() {
       .forEach((el) => (el.style.color = "#343d46"));
 
     num = num + 1;
+    color = "#343d46";
   } else if (num === 3) {
     document.getElementById("body").style.backgroundColor = "#ffffff";
     document.getElementById("reset").src =
@@ -40,6 +47,7 @@ function colorChange() {
       .querySelectorAll("color")
       .forEach((el) => (el.style.color = "#0a0a0a"));
     num = num - 2;
+    color = "#0a0a0a";
   } else {
     alert("You got a bug, reload the page or report it");
   }

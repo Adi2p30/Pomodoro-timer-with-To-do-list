@@ -12,6 +12,7 @@ const createTask = () => {
     ul.appendChild(listItem);
     task.innerhtml = taskValue.value;
     listItem.classList.add("tasklist-li", "color");
+    listItem.style.color = color
     taskValue.value = "";
   }
 
