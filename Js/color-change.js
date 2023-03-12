@@ -20,6 +20,7 @@ function colorChange() {
       .forEach((el) => (el.style.color = "#FFFFFF"));
     num = num + 1;
     color = "#FFFFFF";
+
   } else if (num === 2) {
     document.getElementById("body").style.backgroundColor = "#d3d3d3";
     document.getElementById("reset").src =
@@ -35,6 +36,7 @@ function colorChange() {
 
     num = num + 1;
     color = "#343d46";
+
   } else if (num === 3) {
     document.getElementById("body").style.backgroundColor = "#ffffff";
     document.getElementById("reset").src =
@@ -44,7 +46,7 @@ function colorChange() {
       "./Control-images/Pause-jetblack.png";
       document.getElementById("nav-open-button").src = "./Control-images/down-arrow-jetblack.png"
     document
-      .querySelectorAll("color")
+      .querySelectorAll(".color")
       .forEach((el) => (el.style.color = "#0a0a0a"));
     num = num - 2;
     color = "#0a0a0a";
