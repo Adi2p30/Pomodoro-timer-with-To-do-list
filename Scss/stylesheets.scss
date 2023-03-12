@@ -90,7 +90,7 @@ h3 {
   max-width: 5rem;
 
   & img {
-    opacity: 0.4;
+    opacity: 0.1;
   }
   & img:hover {
     opacity: 1;
@@ -108,7 +108,7 @@ h3 {
   & img {
     max-width: 150px;
     max-width: 150px;
-    opacity: 0.4;
+    opacity: 0.1;
 
     @include disable-drag;
 
@@ -157,7 +157,7 @@ h3 {
   background: none;
   border: none;
   margin-right: 225px;
-  opacity: 0.4;
+  opacity: 0.2;
   &:hover {
     opacity: 1;
   }
@@ -186,12 +186,26 @@ h3 {
   font-size: $fs-large-title;
   max-width: 13.25rem;
   text-align: center;
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 input {
   background: none;
 }
+
+.credits-text{
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  &__pre{
+    opacity: 0.5;
+  }
+}
+
+
+
+
 @media only screen and (max-width: 950px) {
   body {
     display: none;

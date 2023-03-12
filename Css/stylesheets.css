@@ -40,7 +40,7 @@ h3 {
 }
 
 .color {
-  color: #0a0a0a;
+  color: unset;
 }
 
 .nav-bar {
@@ -84,7 +84,7 @@ h3 {
   max-width: 5rem;
 }
 .open-nav-bar-button img {
-  opacity: 0.4;
+  opacity: 0.1;
 }
 .open-nav-bar-button img:hover {
   opacity: 1;
@@ -100,7 +100,7 @@ h3 {
 .header-container img {
   max-width: 150px;
   max-width: 150px;
-  opacity: 0.4;
+  opacity: 0.1;
   -webkit-user-select: none;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -154,7 +154,7 @@ h3 {
   background: none;
   border: none;
   margin-right: 225px;
-  opacity: 0.4;
+  opacity: 0.2;
 }
 .createtask-button:hover {
   opacity: 1;
@@ -187,11 +187,21 @@ h3 {
   font-size: clamp(10.25rem, 7.125rem + 40vw, 11.5rem);
   max-width: 13.25rem;
   text-align: center;
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 input {
   background: none;
+}
+
+.credits-text {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.credits-text__pre {
+  opacity: 0.5;
 }
 
 @media only screen and (max-width: 950px) {
