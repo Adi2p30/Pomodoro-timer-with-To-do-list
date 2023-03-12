@@ -77,8 +77,12 @@
                 class="timer-input color"
                 id="timer-number-min"
                 placeholder="00"
-                size="90"
-                type="text"
+                max="99"
+                min="0"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                onfocus="inputValueOnFocusMin ()"
+                onblur="inputValueOnBlurMin ()"
+                type="number"
                 maxlength="2"
               />
               <h2 class="color">:</h2>
@@ -86,8 +90,12 @@
                 class="timer-input color"
                 id="timer-number-sec"
                 placeholder="00"
-                size="90"
-                type="text"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                onfocus="inputValueOnFocusSec ()"
+                onblur="inputValueOnBlurSec ()"
+                max="99"
+                min="0"
+                type="number"
                 maxlength="2"
               />
             </div>
@@ -141,3 +149,4 @@
 <script src="./js/main.js"></script>
 <script src="./js/color-change.js"></script>
 <script src="./js/task-list.js"></script>
+<script src="./js/input-value-lightup.js"></script>
