@@ -56,93 +56,90 @@
             </ul>
           </div>
         </nav>
-
-        <div class="container">
-          <div class="open-nav-bar-container">
-            <a
-              class="open-nav-bar-button"
-              onclick="openNavBar()"
-              style="-webkit-user-select: none; -webkit-user-drag: none"
-              ><img
-                id="nav-open-button"
-                src="./Control-images/down-arrow-jetblack.png"
-                alt=""
-            /></a>
+        <div class="content-tinted-background">
+          <div class="container">
+            <div class="open-nav-bar-container">
+              <a
+                class="open-nav-bar-button"
+                onclick="openNavBar()"
+                style="-webkit-user-select: none; -webkit-user-drag: none"
+                ><img
+                  id="nav-open-button"
+                  src="./Control-images/down-arrow-jetblack.png"
+                  alt=""
+              /></a>
+            </div>
           </div>
+
+          <section>
+            <div class="header-container">
+              <div class="header-container__left">
+                <img
+                  id="reset"
+                  src="./Control-images/Reset-jetblack.png"
+                  alt=""
+                />
+              </div>
+              <div class="header-container__middle">
+                <input
+                  class="timer-input color"
+                  id="timer-number-min"
+                  placeholder="00"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  type="number"
+                  maxlength="2"
+                  value="25"
+                />
+                <h2 class="color">:</h2>
+                <input
+                  class="timer-input color"
+                  id="timer-number-sec"
+                  placeholder="00"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  type="number"
+                  maxlength="2"
+                  value="00"
+                />
+              </div>
+              <div class="header-container__right">
+                <img
+                  id="start"
+                  style="display: block"
+                  src="./Control-images/Play-jetblack.png"
+                  alt=""
+                />
+                <img
+                  id="pause"
+                  style="display: none"
+                  src="./Control-images/Pause-jetblack.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </section>
+          <section class="tasklist-section">
+            <div class="tasklist-title-container">
+              <div class="tasklist-title">
+                <h3 class="color">To do list</h3>
+              </div>
+              <div class="tasklist-input-container">
+                <input
+                  maxlength="175"
+                  id="tasklist-item"
+                  placeholder="Write a task!"
+                  class="tasklist-input color"
+                  type="text"
+                />
+                <button class="createtask-button color" onclick="createTask()">
+                  ADD
+                </button>
+              </div>
+              <div id="tasklist-container" class="tasklist-container">
+                <ul id="tasklist-ul" class="tasklist-ul"></ul>
+              </div>
+            </div>
+          </section>
         </div>
-
-        <section>
-          <div class="header-container">
-            <div class="header-container__left">
-              <img
-                id="reset"
-                src="./Control-images/Reset-jetblack.png"
-                alt=""
-              />
-            </div>
-            <div class="header-container__middle">
-              <input
-                class="timer-input color"
-                id="timer-number-min"
-                placeholder="00"
-                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                onfocus="inputValueOnFocusMin ()"
-                onblur="inputValueOnBlurMin ()"
-                type="number"
-                maxlength="2"
-                value="25"
-              />
-              <h2 class="color">:</h2>
-              <input
-                class="timer-input color"
-                id="timer-number-sec"
-                placeholder="00"
-                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                onfocus="inputValueOnFocusSec ()"
-                onblur="inputValueOnBlurSec ()"
-                type="number"
-                maxlength="2"
-                value="00"
-              />
-            </div>
-            <div class="header-container__right">
-              <img
-                id="start"
-                style="display: block"
-                src="./Control-images/Play-jetblack.png"
-                alt=""
-              />
-              <img
-                id="pause"
-                style="display: none"
-                src="./Control-images/Pause-jetblack.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </section>
-        <section class="tasklist-section">
-          <div class="tasklist-title-container">
-            <div class="tasklist-title">
-              <h3 class="color">To do list</h3>
-            </div>
-            <div class="tasklist-input-container">
-              <input
-                maxlength="175"
-                id="tasklist-item"
-                placeholder="Write a task!"
-                class="tasklist-input color"
-                type="text"
-              />
-              <button class="createtask-button color" onclick="createTask()">
-                ADD
-              </button>
-            </div>
-            <div id="tasklist-container" class="tasklist-container">
-              <ul id="tasklist-ul" class="tasklist-ul"></ul>
-            </div>
-          </div>
-        </section>
       </div>
     </header>
     <footer class="credits-text">

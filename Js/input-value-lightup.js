@@ -1,4 +1,4 @@
-let numberInputSec = document.querySelector("#timer-number-sec")
+/* let numberInputSec = document.querySelector("#timer-number-sec")
 let numberInputMin = document.querySelector("#timer-number-min")
 
 const inputValueOnFocusSec = () =>{
@@ -15,4 +15,4 @@ const inputValueOnBlurSec = () =>{
 
 const inputValueOnBlurMin = () =>{
     numberInputMin.style.opacity = "0.2"
-}
+} */

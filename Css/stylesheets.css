@@ -188,9 +188,13 @@ h3 {
   padding: 0.2rem;
   min-width: 10%;
   max-width: 100%;
-  font-weight: 700;
+  font-weight: 400;
   font-family: "Tilt Warp", cursive;
   text-align: center;
+}
+.tasklist-li p {
+  font-size: small;
+  letter-spacing: 2px;
 }
 
 .timer-input {
