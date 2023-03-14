@@ -85,8 +85,6 @@
                 class="timer-input color"
                 id="timer-number-min"
                 placeholder="00"
-                max="99"
-                min="00"
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                 onfocus="inputValueOnFocusMin ()"
                 onblur="inputValueOnBlurMin ()"
@@ -102,11 +100,9 @@
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                 onfocus="inputValueOnFocusSec ()"
                 onblur="inputValueOnBlurSec ()"
-                max="60"
-                min="00"
-                value="00"
                 type="number"
                 maxlength="2"
+                value="00"
               />
             </div>
             <div class="header-container__right">
