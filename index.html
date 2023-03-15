@@ -86,9 +86,9 @@
                   id="timer-number-min"
                   placeholder="00"
                   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  value="25"
                   type="number"
                   maxlength="2"
-                  value="25"
                 />
                 <h2 class="color">:</h2>
                 <input
@@ -96,9 +96,9 @@
                   id="timer-number-sec"
                   placeholder="00"
                   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  value="00"
                   type="number"
                   maxlength="2"
-                  value="00"
                 />
               </div>
               <div class="header-container__right">
@@ -130,7 +130,7 @@
                   class="tasklist-input color"
                   type="text"
                 />
-                <button class="createtask-button color" onclick="createTask()">
+                <button class="createtask-button color" id="create-task-button">
                   ADD
                 </button>
               </div>

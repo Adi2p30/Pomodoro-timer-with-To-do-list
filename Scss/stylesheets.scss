@@ -181,9 +181,13 @@ h3 {
   font-weight: $fw-normal;
   font-family: 'Tilt Warp', cursive;
   text-align: center;
+  &:hover{
+    cursor: pointer;
+  }
     & p {
       font-size: small;
       letter-spacing: 2px;
+      @include disable-drag;
     }
 }
 .timer-input {

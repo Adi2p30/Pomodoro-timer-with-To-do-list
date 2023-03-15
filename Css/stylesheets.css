@@ -192,9 +192,17 @@ h3 {
   font-family: "Tilt Warp", cursive;
   text-align: center;
 }
+.tasklist-li:hover {
+  cursor: pointer;
+}
 .tasklist-li p {
   font-size: small;
   letter-spacing: 2px;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }
 
 .timer-input {

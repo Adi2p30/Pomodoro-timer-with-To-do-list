@@ -1,5 +1,6 @@
 let taskValue = document.getElementById("tasklist-item");
 let ul = document.getElementById("tasklist-ul");
+let creatTaskButton = document.querySelector("#create-task-button")
 
 const createTask = () => {
   if (taskValue.value === "") {
@@ -23,3 +24,12 @@ const createTask = () => {
     ul.removeChild(listItem);
   });
 };
+
+taskValue.addEventListener("keypress", (action) =>{
+  if(action.key === "Enter"){
+    createTask ();
+  }
+})
+
+creatTaskButton.addEventListener("click", createTask)
+
