@@ -194,9 +194,12 @@ h3 {
   border: none;
   background: none;
   font-size: $fs-large-title;
-  max-width: 13.25rem;
+  font-weight: $fw-bold;
+  max-width: 14rem;
   text-align: center;
   opacity: 0.2;
+
+  @include disable-drag;
 }
 
 input {
@@ -212,6 +215,10 @@ input {
     opacity: 1;
     font-size: $fs-credits-text ;
   }
+}
+
+.timer-gap {
+  @include disable-drag;
 }
 
 

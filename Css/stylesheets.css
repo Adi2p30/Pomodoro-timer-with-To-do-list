@@ -209,9 +209,15 @@ h3 {
   border: none;
   background: none;
   font-size: clamp(10.25rem, 7.125rem + 40vw, 11.5rem);
-  max-width: 13.25rem;
+  font-weight: 700;
+  max-width: 14rem;
   text-align: center;
   opacity: 0.2;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }
 
 input {
@@ -227,6 +233,14 @@ input {
 .credits-text__pre {
   opacity: 1;
   font-size: clamp(0.3125rem, -0.625rem + 100vw, 0.625rem);
+}
+
+.timer-gap {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }
 
 @media only screen and (max-width: 950px) {

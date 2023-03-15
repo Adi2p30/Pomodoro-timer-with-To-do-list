@@ -81,25 +81,9 @@
                 />
               </div>
               <div class="header-container__middle">
-                <input
-                  class="timer-input color"
-                  id="timer-number-min"
-                  placeholder="00"
-                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                  value="25"
-                  type="number"
-                  maxlength="2"
-                />
-                <h2 class="color">:</h2>
-                <input
-                  class="timer-input color"
-                  id="timer-number-sec"
-                  placeholder="00"
-                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                  value="00"
-                  type="number"
-                  maxlength="2"
-                />
+                <p class="timer-input color" id="timer-number-min">25</p>
+                <h2 class="timer-gap color">:</h2>
+                <p class="timer-input color" id="timer-number-sec">00</p>
               </div>
               <div class="header-container__right">
                 <img
