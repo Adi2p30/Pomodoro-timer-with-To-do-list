@@ -93,11 +93,7 @@ h3 {
   padding: 1rem;
   max-width: 5rem;
 }
-.open-nav-bar-button img {
-  opacity: 0.1;
-}
 .open-nav-bar-button img:hover {
-  opacity: 1;
   zoom: 110%;
 }
 
