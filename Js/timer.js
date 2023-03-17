@@ -1,9 +1,10 @@
 const playButton = document.querySelector("#start");
 const pauseButton = document.querySelector("#pause");
 const resetButton = document.querySelector("#reset");
+const timerChangeSettings = document.querySelector(".timer-settings-list")
 const timeMinutes = document.querySelector("#timer-number-min");
 const timeSeconds = document.querySelector("#timer-number-sec");
-const timeUpSound = new Audio("../audio/bells-logo-140886.mp3");
+const timeUpSound = new Audio("../audio/clock-alarm-8761.mp3");
 let time = 1500;
 let isRunning = true;
 let minutes = 00;
@@ -26,41 +27,32 @@ const updateTimer = () => {
   timeMinutes.innerHTML = minutes;
   timeSeconds.innerHTML = seconds;
 
-  if (time === 0 && isRunning) {
+  if (time === 0) {
+    timeUpSound.play();
     playButton.style.display = "block";
     pauseButton.style.display = "none";
     playButton.style.opacity = "0.1";
     resetButton.style.opacity = "0.1";
-    timeUpSound.play();
     clearInterval(movingTime);
-    alert("Time is up!");
-    timeMinutes.innerHTML = "10";
+    timeMinutes.innerHTML = "00";
     timeSeconds.innerHTML = "00";
-    time = 600;
-
-    isRunning = false;
-  } else if (time === 0 && !isRunning) {
-    playButton.style.display = "block";
-    pauseButton.style.display = "none";
-    playButton.style.opacity = "0.1";
-    resetButton.style.opacity = "0.1";
-    timeUpSound.play();
-    clearInterval(movingTime);
-    alert("Time is up!");
-    timeMinutes.innerHTML = "25";
-    timeSeconds.innerHTML = "00";
-    time = 1500;
-
-    isRunning = true;
+    document
+    .querySelectorAll(".timer-input")
+    .forEach((el) => (el.style.opacity = "0.2"));
+    time = 0;
+    setUpAlert = setInterval(pushAlert, 1000)
   } else {
     time--;
-    console.log("time change");
   }
 };
 
-const startTimer = () => {
-  console.log("clicked");
+const pushAlert = () =>{
+  alert("Time is up!")
+  clearInterval(setUpAlert)
+}
 
+const startTimer = () => {
+  if (time > 0){
   updateTimer();
   movingTime = setInterval(updateTimer, 1000);
 
@@ -68,9 +60,13 @@ const startTimer = () => {
   pauseButton.style.display = "block";
   pauseButton.style.opacity = "1";
   resetButton.style.opacity = "1";
+  timerChangeSettings.style.display = "none";
   document
     .querySelectorAll(".timer-input")
     .forEach((el) => (el.style.opacity = "1"));
+  } else {
+    alert("Please select a time!")
+  }
 };
 
 const pauseTimer = () => {
@@ -78,6 +74,7 @@ const pauseTimer = () => {
   pauseButton.style.display = "none";
   playButton.style.opacity = "0.1";
   resetButton.style.opacity = "0.1";
+  timerChangeSettings.style.display = "flex";
   document
     .querySelectorAll(".timer-input")
     .forEach((el) => (el.style.opacity = "0.2"));
@@ -91,13 +88,14 @@ const resetTimer = () => {
   pauseButton.style.display = "none";
   playButton.style.opacity = "0.1";
   resetButton.style.opacity = "0.1";
+  timerChangeSettings.style.display = "flex";
   document
     .querySelectorAll(".timer-input")
     .forEach((el) => (el.style.opacity = "0.2"));
   clearInterval(movingTime);
   timeSeconds.innerHTML = "00";
-  timeMinutes.innerHTML = "25";
-  time = 1500;
+  timeMinutes.innerHTML = "00";
+  time = 0;
 };
 
 playButton.addEventListener("click", startTimer);

@@ -193,11 +193,34 @@ h3 {
   font-weight: $fw-bold;
   max-width: 14rem;
   text-align: center;
+  
+  .timer-gap {
+    @include disable-drag;
+  }
+  
   opacity: 0.2;
-
+  
   @include disable-drag;
 }
 
+.timer-settings-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  
+  &__ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 1rem;
+  }
+  &__li:hover{
+    cursor: pointer;
+    zoom: 140%;
+    font-weight: $fw-bold;
+  }
+}
 input {
   background: none;
 }
@@ -213,9 +236,11 @@ input {
   }
 }
 
-.timer-gap {
-  @include disable-drag;
-}
+
+
+
+
+
 
 @media only screen and (max-width: 950px) {
   body {
