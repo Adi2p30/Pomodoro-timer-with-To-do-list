@@ -27,7 +27,7 @@ const updateTimer = () => {
   timeMinutes.innerHTML = minutes;
   timeSeconds.innerHTML = seconds;
 
-  if (time === 0 && isRunning) {
+  if (time === 0) {
     playButton.style.display = "block";
     pauseButton.style.display = "none";
     playButton.style.opacity = "0.1";
@@ -35,30 +35,16 @@ const updateTimer = () => {
     timeUpSound.play();
     clearInterval(movingTime);
     alert("Time is up!");
-    timeMinutes.innerHTML = "10";
+    timeMinutes.innerHTML = "00";
     timeSeconds.innerHTML = "00";
-    time = 600;
-
-    isRunning = false;
-  } else if (time === 0 && !isRunning) {
-    playButton.style.display = "block";
-    pauseButton.style.display = "none";
-    playButton.style.opacity = "0.1";
-    resetButton.style.opacity = "0.1";
-    timeUpSound.play();
-    clearInterval(movingTime);
-    alert("Time is up!");
-    timeMinutes.innerHTML = "25";
-    timeSeconds.innerHTML = "00";
-    time = 1500;
-
-    isRunning = true;
+    time = 0;
   } else {
     time--;
   }
 };
 
 const startTimer = () => {
+  if (time > 0){
   updateTimer();
   movingTime = setInterval(updateTimer, 1000);
 
@@ -70,6 +56,9 @@ const startTimer = () => {
   document
     .querySelectorAll(".timer-input")
     .forEach((el) => (el.style.opacity = "1"));
+  } else {
+    alert("Please select a time!")
+  }
 };
 
 const pauseTimer = () => {
@@ -97,8 +86,8 @@ const resetTimer = () => {
     .forEach((el) => (el.style.opacity = "0.2"));
   clearInterval(movingTime);
   timeSeconds.innerHTML = "00";
-  timeMinutes.innerHTML = "25";
-  time = 1500;
+  timeMinutes.innerHTML = "00";
+  time = 0;
 };
 
 playButton.addEventListener("click", startTimer);
