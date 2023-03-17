@@ -1,6 +1,7 @@
 const playButton = document.querySelector("#start");
 const pauseButton = document.querySelector("#pause");
 const resetButton = document.querySelector("#reset");
+const timerChangeSettings = document.querySelector(".timer-settings-list")
 const timeMinutes = document.querySelector("#timer-number-min");
 const timeSeconds = document.querySelector("#timer-number-sec");
 const timeUpSound = new Audio("../audio/bells-logo-140886.mp3");
@@ -54,13 +55,10 @@ const updateTimer = () => {
     isRunning = true;
   } else {
     time--;
-    console.log("time change");
   }
 };
 
 const startTimer = () => {
-  console.log("clicked");
-
   updateTimer();
   movingTime = setInterval(updateTimer, 1000);
 
@@ -68,6 +66,7 @@ const startTimer = () => {
   pauseButton.style.display = "block";
   pauseButton.style.opacity = "1";
   resetButton.style.opacity = "1";
+  timerChangeSettings.style.display = "none";
   document
     .querySelectorAll(".timer-input")
     .forEach((el) => (el.style.opacity = "1"));
@@ -78,6 +77,7 @@ const pauseTimer = () => {
   pauseButton.style.display = "none";
   playButton.style.opacity = "0.1";
   resetButton.style.opacity = "0.1";
+  timerChangeSettings.style.display = "flex";
   document
     .querySelectorAll(".timer-input")
     .forEach((el) => (el.style.opacity = "0.2"));
@@ -91,6 +91,7 @@ const resetTimer = () => {
   pauseButton.style.display = "none";
   playButton.style.opacity = "0.1";
   resetButton.style.opacity = "0.1";
+  timerChangeSettings.style.display = "flex";
   document
     .querySelectorAll(".timer-input")
     .forEach((el) => (el.style.opacity = "0.2"));

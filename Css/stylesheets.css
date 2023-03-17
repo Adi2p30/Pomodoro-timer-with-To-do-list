@@ -215,6 +215,31 @@ h3 {
   -moz-user-drag: none;
   -o-user-drag: none;
 }
+.timer-input .timer-gap {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.timer-settings-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+.timer-settings-list__ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 1rem;
+}
+.timer-settings-list__li:hover {
+  cursor: pointer;
+  zoom: 140%;
+  font-weight: 700;
+}
 
 input {
   background: none;
@@ -229,14 +254,6 @@ input {
 .credits-text__pre {
   opacity: 1;
   font-size: clamp(0.3125rem, -0.625rem + 100vw, 0.625rem);
-}
-
-.timer-gap {
-  -webkit-user-select: none;
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
 }
 
 @media only screen and (max-width: 950px) {
