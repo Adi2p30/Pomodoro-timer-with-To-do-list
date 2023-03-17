@@ -35,12 +35,12 @@ h1 {
 
 h2 {
   font-size: $fs-title;
-  font-family: 'Tilt Warp', cursive;
+  font-family: "Tilt Warp", cursive;
 }
 
 h3 {
   font-size: $fs-large-text;
-  font-family: 'Tilt Warp', cursive;
+  font-family: "Tilt Warp", cursive;
 }
 
 .color {
@@ -175,16 +175,16 @@ h3 {
   min-width: 10%;
   max-width: 100%;
   font-weight: $fw-normal;
-  font-family: 'Tilt Warp', cursive;
+  font-family: "Tilt Warp", cursive;
   text-align: center;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
-    & p {
-      font-size: small;
-      letter-spacing: 2px;
-      @include disable-drag;
-    }
+  & p {
+    font-size: small;
+    letter-spacing: 2px;
+    @include disable-drag;
+  }
 }
 .timer-input {
   border: none;
@@ -202,23 +202,20 @@ input {
   background: none;
 }
 
-.credits-text{
+.credits-text {
   margin-top: auto;
   display: flex;
   justify-content: center;
   padding: 1rem;
-  &__pre{
+  &__pre {
     opacity: 1;
-    font-size: $fs-credits-text ;
+    font-size: $fs-credits-text;
   }
 }
 
 .timer-gap {
   @include disable-drag;
 }
-
-
-
 
 @media only screen and (max-width: 950px) {
   body {

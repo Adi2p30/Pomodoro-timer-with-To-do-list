@@ -1,97 +1,108 @@
-let play = document.querySelector("#start")
-let pause = document.querySelector("#pause")
-let reset = document.querySelector("#reset")
-let timeMinutes = document.querySelector("#timer-number-min")
-let timeSeconds = document.querySelector("#timer-number-sec")
-let timeUpSound = new Audio("../audio/bells-logo-140886.mp3");
+const playButton = document.querySelector("#start");
+const pauseButton = document.querySelector("#pause");
+const resetButton = document.querySelector("#reset");
+const timeMinutes = document.querySelector("#timer-number-min");
+const timeSeconds = document.querySelector("#timer-number-sec");
+const timeUpSound = new Audio("../audio/bells-logo-140886.mp3");
 let time = 1500;
-var on = true
+let isRunning = true;
 let minutes = 00;
 let seconds = 00;
+let movingTime;
+
+const SECONDS_IN_MINUTES = 60;
 
 const updateTimer = () => {
-    minutes = Math.floor(time/60);
-    seconds = time % 60;
+  if (time === 1500) {
+    time--;
+  }
 
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-    minutes = minutes < 10 ? "0" + minutes : minutes;
+  minutes = Math.floor(time / SECONDS_IN_MINUTES);
+  seconds = time % SECONDS_IN_MINUTES;
 
-    timeMinutes.innerHTML = minutes;
-    timeSeconds.innerHTML = seconds;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
 
-    if (time === 0 && on === true){
-        play.style.display = "block";
-        pause.style.display = "none";
-        play.style.opacity = "0.1";
-        reset.style.opacity = "0.1";
-        timeUpSound.play();
-        clearInterval (movingTime);
-        alert ("Time is up!");
-        timeMinutes.innerHTML = "10";
-        timeSeconds.innerHTML === "00";
-        time = 600;
+  timeMinutes.innerHTML = minutes;
+  timeSeconds.innerHTML = seconds;
 
-        on = false
-    } else if (time === 0 && on === false) {
-        play.style.display = "block";
-        pause.style.display = "none";
-        play.style.opacity = "0.1";
-        reset.style.opacity = "0.1";
-        timeUpSound.play();
-        clearInterval (movingTime);
-        alert ("Time is up!");
-        timeMinutes.innerHTML = "25";
-        timeSeconds.innerHTML === "00";
-        time = 1500;
+  if (time === 0 && isRunning) {
+    playButton.style.display = "block";
+    pauseButton.style.display = "none";
+    playButton.style.opacity = "0.1";
+    resetButton.style.opacity = "0.1";
+    timeUpSound.play();
+    clearInterval(movingTime);
+    alert("Time is up!");
+    timeMinutes.innerHTML = "10";
+    timeSeconds.innerHTML = "00";
+    time = 600;
 
-        on = true
-    } else{
-        time--;
-    }
-}
+    isRunning = false;
+  } else if (time === 0 && !isRunning) {
+    playButton.style.display = "block";
+    pauseButton.style.display = "none";
+    playButton.style.opacity = "0.1";
+    resetButton.style.opacity = "0.1";
+    timeUpSound.play();
+    clearInterval(movingTime);
+    alert("Time is up!");
+    timeMinutes.innerHTML = "25";
+    timeSeconds.innerHTML = "00";
+    time = 1500;
 
+    isRunning = true;
+  } else {
+    time--;
+    console.log("time change");
+  }
+};
 
 const startTimer = () => {
-        play.style.display = "none";
-        pause.style.display = "block";
-        pause.style.opacity = "1";
-        reset.style.opacity = "1";
-        document.querySelectorAll(".timer-input").forEach((el) => (el.style.opacity = "1"));
-        movingTime = setInterval (updateTimer, 1000)
-}
+  console.log("clicked");
 
-const pauseTimer = () =>{
-    play.style.display = "block";
-    pause.style.display = "none";
-    play.style.opacity = "0.1";
-    reset.style.opacity = "0.1";
-    document.querySelectorAll(".timer-input").forEach((el) => (el.style.opacity = "0.2"));
-    clearInterval (movingTime)
-    timeMinutes.innerHTML = minutes;
-    timeSeconds.innerHTML = seconds;
-}
+  updateTimer();
+  movingTime = setInterval(updateTimer, 1000);
 
+  playButton.style.display = "none";
+  pauseButton.style.display = "block";
+  pauseButton.style.opacity = "1";
+  resetButton.style.opacity = "1";
+  document
+    .querySelectorAll(".timer-input")
+    .forEach((el) => (el.style.opacity = "1"));
+};
 
-const resetTimer = () =>{
-    play.style.display = "block";
-    pause.style.display = "none";
-    play.style.opacity = "0.1";
-    reset.style.opacity = "0.1";
-    document.querySelectorAll(".timer-input").forEach((el) => (el.style.opacity = "0.2"));
-    clearInterval (movingTime)
-    timeSeconds.innerHTML = "00";
-    timeMinutes.innerHTML = "25";
-    time = 1500;
-}
+const pauseTimer = () => {
+  playButton.style.display = "block";
+  pauseButton.style.display = "none";
+  playButton.style.opacity = "0.1";
+  resetButton.style.opacity = "0.1";
+  document
+    .querySelectorAll(".timer-input")
+    .forEach((el) => (el.style.opacity = "0.2"));
+  clearInterval(movingTime);
+  timeMinutes.innerHTML = minutes;
+  timeSeconds.innerHTML = seconds;
+};
 
+const resetTimer = () => {
+  playButton.style.display = "block";
+  pauseButton.style.display = "none";
+  playButton.style.opacity = "0.1";
+  resetButton.style.opacity = "0.1";
+  document
+    .querySelectorAll(".timer-input")
+    .forEach((el) => (el.style.opacity = "0.2"));
+  clearInterval(movingTime);
+  timeSeconds.innerHTML = "00";
+  timeMinutes.innerHTML = "25";
+  time = 1500;
+};
 
-play.addEventListener("click", startTimer)
-pause.addEventListener("click", pauseTimer)
-reset.addEventListener("click", resetTimer)
-
-
-
-
+playButton.addEventListener("click", startTimer);
+pauseButton.addEventListener("click", pauseTimer);
+resetButton.addEventListener("click", resetTimer);
 
 /* let play = document.querySelector("#start")
 let pause = document.querySelector("#pause")

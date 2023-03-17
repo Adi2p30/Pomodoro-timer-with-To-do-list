@@ -1,3 +1,5 @@
+// Background
+
 const urlBackgroundInput = document.querySelector("#background-url-input");
 
 urlBackgroundInput.addEventListener("input", () => {
@@ -7,14 +9,14 @@ urlBackgroundInput.addEventListener("input", () => {
   urlBackgroundInput.value = "";
 });
 
+// Navbar
 
+const hideNavBar = () => {
+  document.querySelector("#nav-bar").style.display = "none";
+  document.querySelector(".open-nav-bar-button").style.display = "flex";
+};
 
-const hideNavBar = () =>{
-    document.querySelector("#nav-bar").style.display = "none";
-    document.querySelector(".open-nav-bar-button").style.display = "flex"
-}
-
-const openNavBar = () =>{
-  document.querySelector("#nav-bar").style.display = "flex"
-  document.querySelector(".open-nav-bar-button").style.display = "none"
-}
+const openNavBar = () => {
+  document.querySelector("#nav-bar").style.display = "flex";
+  document.querySelector(".open-nav-bar-button").style.display = "none";
+};
