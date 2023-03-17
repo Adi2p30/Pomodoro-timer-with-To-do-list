@@ -4,7 +4,7 @@ const resetButton = document.querySelector("#reset");
 const timerChangeSettings = document.querySelector(".timer-settings-list")
 const timeMinutes = document.querySelector("#timer-number-min");
 const timeSeconds = document.querySelector("#timer-number-sec");
-const timeUpSound = new Audio("../audio/bells-logo-140886.mp3");
+const timeUpSound = new Audio("../audio/clock-alarm-8761.mp3");
 let time = 1500;
 let isRunning = true;
 let minutes = 00;
@@ -28,20 +28,28 @@ const updateTimer = () => {
   timeSeconds.innerHTML = seconds;
 
   if (time === 0) {
+    timeUpSound.play();
     playButton.style.display = "block";
     pauseButton.style.display = "none";
     playButton.style.opacity = "0.1";
     resetButton.style.opacity = "0.1";
-    timeUpSound.play();
     clearInterval(movingTime);
-    alert("Time is up!");
     timeMinutes.innerHTML = "00";
     timeSeconds.innerHTML = "00";
+    document
+    .querySelectorAll(".timer-input")
+    .forEach((el) => (el.style.opacity = "0.2"));
     time = 0;
+    setUpAlert = setInterval(pushAlert, 1000)
   } else {
     time--;
   }
 };
+
+const pushAlert = () =>{
+  alert("Time is up!")
+  clearInterval(setUpAlert)
+}
 
 const startTimer = () => {
   if (time > 0){
