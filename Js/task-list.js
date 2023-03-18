@@ -6,9 +6,9 @@ const createTask = () => {
   if (taskValue.value === "") {
     alert("Write something");
   } else {
-    const task = document.createElement("p");
+    var task = document.createElement("p");
     task.innerText = taskValue.value;
-    const listItem = document.createElement("li");
+    var listItem = document.createElement("li");
     listItem.appendChild(task);
     ul.appendChild(listItem);
     task.innerHTML = taskValue.value;
