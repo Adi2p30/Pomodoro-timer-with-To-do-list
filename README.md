@@ -4,7 +4,7 @@ This is a website that offeres a pomodoro-timer and a to-do-list. The website is
 
 In Development: 02/26/2023
 
-Deployed [17/03/2023] @custompomodoro.netlify.app
+Deployed [17/03/2023] @ https://custompomodoro.netlify.app/
 
 # Technologies
 
