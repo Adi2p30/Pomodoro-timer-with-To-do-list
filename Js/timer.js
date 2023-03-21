@@ -29,6 +29,7 @@ const updateTimer = () => {
 
   if (time === 0) {
     timeUpSound.play();
+    timerChangeSettings.style.display = "flex";
     playButton.style.display = "block";
     pauseButton.style.display = "none";
     playButton.style.opacity = "0.1";
