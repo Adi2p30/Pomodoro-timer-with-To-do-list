@@ -86,6 +86,8 @@ h3 {
 
 .open-nav-bar-button {
   display: none;
+  max-width: 50px;
+  max-height: 50px;
   justify-self: center;
   padding: 1rem;
   max-width: 5rem;
@@ -230,13 +232,15 @@ input {
   display: flex;
   justify-content: center;
   padding: 1rem;
-  &__pre {
+  & pre {
     opacity: 1;
     font-size: $fs-credits-text;
   }
 }
 
-
+.sound-test-button:hover{
+  cursor: pointer;
+}
 
 
 
