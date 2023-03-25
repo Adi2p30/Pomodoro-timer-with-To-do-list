@@ -258,10 +258,6 @@ input {
   font-size: clamp(0.3125rem, -0.625rem + 100vw, 0.625rem);
 }
 
-.sound-test-button:hover {
-  cursor: pointer;
-}
-
 @media only screen and (max-width: 950px) {
   body {
     display: none;
