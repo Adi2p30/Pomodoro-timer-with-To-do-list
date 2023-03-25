@@ -12,9 +12,9 @@ let minutes = 00;
 let seconds = 00;
 let movingTime;
 
-soundTesting.addEventListener("click", () =>{
-  timeUpSound.play();
-})
+const playingSound = () =>{
+timeUpSound.play();
+}
 
 const SECONDS_IN_MINUTES = 60;
 
