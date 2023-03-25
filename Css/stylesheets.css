@@ -89,6 +89,8 @@ h3 {
 
 .open-nav-bar-button {
   display: none;
+  max-width: 50px;
+  max-height: 50px;
   justify-self: center;
   padding: 1rem;
   max-width: 5rem;
@@ -251,9 +253,13 @@ input {
   justify-content: center;
   padding: 1rem;
 }
-.credits-text__pre {
+.credits-text pre {
   opacity: 1;
   font-size: clamp(0.3125rem, -0.625rem + 100vw, 0.625rem);
+}
+
+.sound-test-button:hover {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 950px) {
