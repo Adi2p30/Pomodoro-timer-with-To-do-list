@@ -42,8 +42,3 @@ const openNavBar = () => {
  */
 
 
-
-//Audio Volume tester
-soundTesting.addEventListener("click", () =>{
-  timeUpSound.play()
-})
