@@ -2,7 +2,6 @@
 let openNavBarAnimationInterval;
 var openNavBarAnimationValue = 0;
 const urlBackgroundInput = document.querySelector("#background-url-input");
-const soundTesting = document.querySelector("#soundTesting")
 
 urlBackgroundInput.addEventListener("input", () => {
   document.body.style[
