@@ -5,7 +5,6 @@ const timerChangeSettings = document.querySelector(".timer-settings-list")
 const timeMinutes = document.querySelector("#timer-number-min");
 const timeSeconds = document.querySelector("#timer-number-sec");
 const timeUpSound = new Audio("../audio/clock-alarm-8761.mp3");
-const soundTesting = document.querySelector("#soundTesting")
 let time = 1500;
 let isRunning = true;
 let minutes = 00;
@@ -13,7 +12,7 @@ let seconds = 00;
 let movingTime;
 
 const playingSound = () =>{
-timeUpSound.play();
+  timeUpSound.play();
 }
 
 const SECONDS_IN_MINUTES = 60;
