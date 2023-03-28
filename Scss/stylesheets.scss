@@ -43,6 +43,10 @@ h3 {
   font-family: "Tilt Warp", cursive;
 }
 
+h4 {
+  font-size: $fs-very-small-text;
+  font-weight: $fw-bold;
+}
 .color {
   color: unset;
 }
@@ -238,13 +242,136 @@ input {
   }
 }
 
+.extra-button{
+  background: none;
+  border: none;
+  font-size: $fs-credits-text;
+  &:hover{
+    text-decoration: underline;
+  }
+  padding: 0.5rem;
+}
+.extra-buttons-container{
+  display: flex;
+  width: 95vw;
+  margin-inline: auto;
+  justify-content: flex-end;
+  gap: 0.5rem;
 
+}
 
+//Settings container things
+.settings-background{
+  min-height: 60vh;
+  max-height: 100vh;
+  min-width: 60vw;
+  max-width: 90vw;
+  background-color: $clr-black;
+  border: 1px solid $clr-white;
+  border-radius: 2%;
+  opacity: 0.90;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -30vh; 
+  margin-left: -30vw; 
+  display: none;
+}
 
+.settings-container{
+  max-height: 95%;
+  max-width: 95%;
+  margin-inline: auto;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  &__title{
+    align-self: center;
+    color:  $clr-white;
+    margin-bottom:1rem;
+  }
+  &__subtitle{
+    color: $clr-white ;
+  }
+  &__pre{
+    color: $clr-white;
+    display: flex;
+    align-items: center;
+    width: 20%;
+  }
+  & p{
+    color: $clr-white
+  }
+}
+.settings-contianer-segment{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.settings-container-segment__row{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.setting-segment-container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.slider {
+  -webkit-appearance: none; 
+  appearance: none;
+  border: 1px solid $clr-white;
+  border-radius: 1rem;
+  width: 80%; 
+  height: 25px; 
+  opacity: 0.7;
+  -webkit-transition: .2s; 
+  transition: opacity .2s;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+  &::-moz-range-track {
+    background-color: white;
+  }
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.timer-position-settings__centre{
+  font-weight: $fw-normal;
+}
+.timer-position-settings__top{
+  font-weight: $fw-bold;
+}
 
 
 @media only screen and (max-width: 950px) {
   body {
     display: none;
   }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input[type='range'] {
+    overflow: hidden;
+    -webkit-appearance: none;
+    background-color: $clr-white;
+  }
+  
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 100%;
+    -webkit-appearance: none;
+    color: $clr-black;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 25px;
+    -webkit-appearance: none;
+    height: 100%;
+    cursor: ew-resize;
+    background: $clr-black;
+    border-radius: 100%;
+  }
+
 }

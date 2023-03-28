@@ -50,5 +50,3 @@ const colorChange = () => {
     alert("You got a bug, reload the page or report it");
   }
 };
-
-button.addEventListener("click", colorChange);

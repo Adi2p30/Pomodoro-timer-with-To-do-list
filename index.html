@@ -43,8 +43,8 @@
               </li>
               <!-- <li><a onclick="openNavBar()">Open nav-bar</a></li>  Make a hide and dissapear upon open and hide and etc.-->
               <li>
-                <a onclick="colorChange()" class="nav-bar__items button color"
-                  >Change color</a
+                <a id="settings-button" class="nav-bar__items color"
+                  >Settings</a
                 >
               </li>
               <li>
@@ -146,10 +146,82 @@
       <pre class="color credits-text__pre">
 @ 2023 Custom-Pomodoro. All rights reserved.</pre
       >
-      <button onclick="playingSound()" class="sound-test-button">
-        test sounds
-      </button>
     </footer>
+    <div class="extra-buttons-container">
+      <button onclick="playingSound()" class="extra-button color">
+        Test Sound
+      </button>
+      <button onclick="colorChange()" class="extra-button color">
+        Change color
+      </button>
+    </div>
+
+    <div id="settings-background" class="settings-background">
+      <div class="settings-container">
+        <h3 class="settings-container__title">Settings</h3>
+
+        <div class="setting-segment-container">
+          <div class="settings-contianer-segment">
+            <h4 class="settings-container__subtitle">Sound settings</h4>
+            <div class="settings-container-segment__row">
+              <pre class="settings-container__pre">Alarm volume</pre>
+              <input
+                id="volume-slider"
+                type="range"
+                min="1"
+                max="100"
+                class="slider"
+              />
+            </div>
+          </div>
+
+          <div class="settings-contianer-segment">
+            <h4 class="settings-container__subtitle">Text-Opacity settings</h4>
+            <div class="settings-container-segment__row">
+              <pre class="settings-container__pre">Timer-opacity</pre>
+              <input
+                id="Timer-opacity-slider"
+                type="range"
+                min="1"
+                max="100"
+                class="slider"
+              />
+            </div>
+            <div class="settings-container-segment__row">
+              <pre class="settings-container__pre">Control-opacity</pre>
+              <input
+                id="Timer-opacity-slider"
+                type="range"
+                min="1"
+                max="100"
+                class="slider"
+              />
+            </div>
+            <div class="settings-container-segment__row">
+              <pre class="settings-container__pre">Text-opacity</pre>
+              <input
+                id="Text-opacity-slider"
+                type="range"
+                min="1"
+                max="100"
+                class="slider"
+              />
+            </div>
+          </div>
+
+          <div class="settings-contianer-segment">
+            <h4 class="settings-container__subtitle">
+              Timer Position settings
+            </h4>
+            <div class="settings-container-segment__row">
+              <pre class="settings-container__pre">Timer-position:</pre>
+              <p class="timer-position-settings__centre">Centre</p>
+              <p class="timer-position-settings__top">Top</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 <script src="./js/main.js"></script>
