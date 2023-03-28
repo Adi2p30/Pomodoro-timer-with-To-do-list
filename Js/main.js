@@ -15,29 +15,28 @@ urlBackgroundInput.addEventListener("input", () => {
 const hideNavBar = () => {
   document.querySelector("#nav-bar").style.display = "none";
   document.querySelector(".open-nav-bar-button").style.display = "flex";
-  clearInterval(openNavBarAnimationInterval);
 };
 
 const openNavBar = () => {
   document.querySelector("#nav-bar").style.display = "flex";
   document.querySelector(".open-nav-bar-button").style.display = "none";
-  openNavBarAnimationInterval = setInterval(openNavBarAnimation, 1000);
 };
 
 
-//Open Nav Bar Button animation
+//Open settings
 
-/* const openNavBarAnimation = () =>{
-  if(openNavBarAnimationValue =0){
-    document.querySelector(".open-nav-bar-button").style.transform = "scale(1.5)";
-    openNavBarAnimationValue = openNavBarAnimationValue++;
-  } else if (openNavBarAnimationValue = 1){
-    document.querySelector(".open-nav-bar-button").style.transform = "scale(1)";
-    openNavBarAnimationValue = openNavBarAnimationValue--;
+const settingsButton = document.querySelector("#settings-button")
+const settingsTab = document.querySelector("#settings-background")
+var i = 0;
+
+settingsButton.addEventListener("click", ()=> {
+  if (i === 0){
+    settingsTab.style.display = "block"
+    i++
+  } else if (i === 1){
+    settingsTab.style.display = "none"
+    i--
   } else {
-    alert("You got a bug, report it!")
+    alert("you got a bug, tell Rixen!")
   }
-  }
- */
-
-
+})
