@@ -322,6 +322,7 @@ input {
   -webkit-appearance: none; 
   appearance: none;
   border: 1px solid $clr-white;
+  background-color: white;
   border-radius: 1rem;
   width: 80%; 
   height: 25px; 
@@ -330,13 +331,23 @@ input {
   transition: opacity .2s;
   outline: none;
   transition: background 450ms ease-in;
-  -webkit-appearance: none;
-  &::-moz-range-track {
-    background-color: white;
-  }
   &:hover{
     opacity: 1;
   }
+  &::-webkit-slider-runnable-track {
+    height: 100%;
+    -webkit-appearance: none;
+    color: $clr-black;
+  }
+  &::-webkit-slider-thumb {
+    width: 25px;
+    -webkit-appearance: none;
+    height: 100%;
+    cursor: ew-resize;
+    background: $clr-black;
+    border-radius: 100%;
+  }
+  
 }
 
 .timer-position-settings__centre{
@@ -351,27 +362,4 @@ input {
   body {
     display: none;
   }
-}
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  input[type='range'] {
-    overflow: hidden;
-    -webkit-appearance: none;
-    background-color: $clr-white;
-  }
-  
-  input[type='range']::-webkit-slider-runnable-track {
-    height: 100%;
-    -webkit-appearance: none;
-    color: $clr-black;
-  }
-  
-  input[type='range']::-webkit-slider-thumb {
-    width: 25px;
-    -webkit-appearance: none;
-    height: 100%;
-    cursor: ew-resize;
-    background: $clr-black;
-    border-radius: 100%;
-  }
-
 }

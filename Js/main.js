@@ -15,13 +15,11 @@ urlBackgroundInput.addEventListener("input", () => {
 const hideNavBar = () => {
   document.querySelector("#nav-bar").style.display = "none";
   document.querySelector(".open-nav-bar-button").style.display = "flex";
-  clearInterval(openNavBarAnimationInterval);
 };
 
 const openNavBar = () => {
   document.querySelector("#nav-bar").style.display = "flex";
   document.querySelector(".open-nav-bar-button").style.display = "none";
-  openNavBarAnimationInterval = setInterval(openNavBarAnimation, 1000);
 };
 
 
