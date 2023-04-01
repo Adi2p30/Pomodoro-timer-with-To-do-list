@@ -81,9 +81,9 @@
                 />
               </div>
               <div class="header-container__middle">
-                <p class="timer-input color" id="timer-number-min">25</p>
+                <p class="time-number color" id="timer-number-min">25</p>
                 <h2 class="timer-gap color">:</h2>
-                <p class="timer-input color" id="timer-number-sec">00</p>
+                <p class="time-number color" id="timer-number-sec">00</p>
               </div>
               <div class="header-container__right">
                 <img
@@ -155,7 +155,7 @@
         Change color
       </button>
     </div>
-
+    </div>
     <div id="settings-background" class="settings-background">
       <div class="settings-container">
         <h3 class="settings-container__title">Settings</h3>
@@ -164,7 +164,9 @@
           <div class="settings-contianer-segment">
             <h4 class="settings-container__subtitle">Sound settings</h4>
             <div class="settings-container-segment__row">
-              <pre class="settings-container__pre">Alarm volume</pre>
+              <pre
+                class="settings-container__pre"
+              >Alarm volume: <pre class="settings-container__value" id="volume-opacity-slider-value-output">50</pre></pre>
               <input
                 id="volume-slider"
                 type="range"
@@ -176,11 +178,13 @@
           </div>
 
           <div class="settings-contianer-segment">
-            <h4 class="settings-container__subtitle">Text-Opacity settings</h4>
+            <h4 class="settings-container__subtitle">Opacity settings</h4>
             <div class="settings-container-segment__row">
-              <pre class="settings-container__pre">Timer-opacity</pre>
+              <pre
+                class="settings-container__pre"
+              >Timer-opacity: <pre class="settings-container__value" id="timer-opacity-slider-value-output">50</pre></pre>
               <input
-                id="Timer-opacity-slider"
+                id="timer-opacity-slider"
                 type="range"
                 min="1"
                 max="100"
@@ -188,19 +192,11 @@
               />
             </div>
             <div class="settings-container-segment__row">
-              <pre class="settings-container__pre">Control-opacity</pre>
+              <pre
+                class="settings-container__pre"
+              >Text-opacity: <pre class="settings-container__value" id="text-opacity-slider-value-output">50</pre></pre>
               <input
-                id="Timer-opacity-slider"
-                type="range"
-                min="1"
-                max="100"
-                class="slider"
-              />
-            </div>
-            <div class="settings-container-segment__row">
-              <pre class="settings-container__pre">Text-opacity</pre>
-              <input
-                id="Text-opacity-slider"
+                id="text-opacity-slider"
                 type="range"
                 min="1"
                 max="100"

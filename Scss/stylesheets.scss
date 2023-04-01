@@ -192,7 +192,7 @@ h4 {
     @include disable-drag;
   }
 }
-.timer-input {
+.time-number {
   border: none;
   background: none;
   font-size: $fs-large-title;
@@ -223,7 +223,7 @@ h4 {
   }
   &__li:hover{
     cursor: pointer;
-    zoom: 140%;
+    scale: 125%;
     font-weight: $fw-bold;
   }
 }
@@ -241,6 +241,7 @@ input {
     font-size: $fs-credits-text;
   }
 }
+
 
 .extra-button{
   background: none;
@@ -299,6 +300,12 @@ input {
     align-items: center;
     width: 20%;
   }
+  &__value{
+    color: $clr-accent;
+    display: flex;
+    align-items: center;
+    font-weight: $fw-bold;
+  }
   & p{
     color: $clr-white
   }
@@ -356,7 +363,6 @@ input {
 .timer-position-settings__top{
   font-weight: $fw-bold;
 }
-
 
 @media only screen and (max-width: 950px) {
   body {

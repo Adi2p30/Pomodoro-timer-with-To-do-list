@@ -208,7 +208,7 @@ h4 {
   -o-user-drag: none;
 }
 
-.timer-input {
+.time-number {
   border: none;
   background: none;
   font-size: clamp(10.25rem, 7.125rem + 40vw, 11.5rem);
@@ -222,7 +222,7 @@ h4 {
   -moz-user-drag: none;
   -o-user-drag: none;
 }
-.timer-input .timer-gap {
+.time-number .timer-gap {
   -webkit-user-select: none;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -244,7 +244,7 @@ h4 {
 }
 .timer-settings-list__li:hover {
   cursor: pointer;
-  zoom: 140%;
+  scale: 125%;
   font-weight: 700;
 }
 
@@ -319,6 +319,12 @@ input {
   display: flex;
   align-items: center;
   width: 20%;
+}
+.settings-container__value {
+  color: #1ebbd7;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
 }
 .settings-container p {
   color: #ffffff;
