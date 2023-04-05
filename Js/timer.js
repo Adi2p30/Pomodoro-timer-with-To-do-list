@@ -27,6 +27,7 @@ const updateTimer = () => {
 
   timeMinutes.innerHTML = minutes;
   timeSeconds.innerHTML = seconds;
+  document.querySelector("title").innerHTML = minutes + ":" + seconds + " " + "Custom-Pomodoro";
 
   if (time === 0) {
     timeUpSound.play();
