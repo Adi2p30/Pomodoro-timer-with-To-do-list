@@ -33,14 +33,14 @@ const updateTimer = () => {
     timerChangeSettings.style.display = "flex";
     playButton.style.display = "block";
     pauseButton.style.display = "none";
-    playButton.style.opacity = "0.1";
-    resetButton.style.opacity = "0.1";
+/*     playButton.style.opacity = "0.1";
+    resetButton.style.opacity = "0.1"; */
     clearInterval(movingTime);
     timeMinutes.innerHTML = "00";
     timeSeconds.innerHTML = "00";
-    document
-    .querySelectorAll(".timer-input")
-    .forEach((el) => (el.style.opacity = "0.2"));
+/*     document
+    .querySelectorAll(".time-number")
+    .forEach((el) => (el.style.opacity = "0.2")); */
     time = 0;
     setUpAlert = setInterval(pushAlert, 1000)
   } else {
@@ -63,9 +63,6 @@ const startTimer = () => {
   pauseButton.style.opacity = "1";
   resetButton.style.opacity = "1";
   timerChangeSettings.style.display = "none";
-  document
-    .querySelectorAll(".timer-input")
-    .forEach((el) => (el.style.opacity = "1"));
   } else {
     alert("Please select a time!")
   }
@@ -77,9 +74,6 @@ const pauseTimer = () => {
   playButton.style.opacity = "0.1";
   resetButton.style.opacity = "0.1";
   timerChangeSettings.style.display = "flex";
-  document
-    .querySelectorAll(".timer-input")
-    .forEach((el) => (el.style.opacity = "0.2"));
   clearInterval(movingTime);
   timeMinutes.innerHTML = minutes;
   timeSeconds.innerHTML = seconds;
@@ -91,9 +85,6 @@ const resetTimer = () => {
   playButton.style.opacity = "0.1";
   resetButton.style.opacity = "0.1";
   timerChangeSettings.style.display = "flex";
-  document
-    .querySelectorAll(".timer-input")
-    .forEach((el) => (el.style.opacity = "0.2"));
   clearInterval(movingTime);
   timeSeconds.innerHTML = "00";
   timeMinutes.innerHTML = "00";
