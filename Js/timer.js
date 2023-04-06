@@ -11,11 +11,11 @@ let minutes = 00;
 let seconds = 00;
 let movingTime;
 
+const SECONDS_IN_MINUTES = 60;
+
 const playingSound = () =>{
   timeUpSound.play();
 }
-
-const SECONDS_IN_MINUTES = 60;
 
 const updateTimer = () => {
 
@@ -34,14 +34,11 @@ const updateTimer = () => {
     timerChangeSettings.style.display = "flex";
     playButton.style.display = "block";
     pauseButton.style.display = "none";
-/*     playButton.style.opacity = "0.1";
-    resetButton.style.opacity = "0.1"; */
+    document.querySelector("title").innerHTML = "Custom-Pomodoro";
+    resetButton.style.opacity = "0.1"; 
     clearInterval(movingTime);
     timeMinutes.innerHTML = "00";
     timeSeconds.innerHTML = "00";
-/*     document
-    .querySelectorAll(".time-number")
-    .forEach((el) => (el.style.opacity = "0.2")); */
     time = 0;
     setUpAlert = setInterval(pushAlert, 1000)
   } else {
@@ -61,8 +58,6 @@ const startTimer = () => {
 
   playButton.style.display = "none";
   pauseButton.style.display = "block";
-  pauseButton.style.opacity = "1";
-  resetButton.style.opacity = "1";
   timerChangeSettings.style.display = "none";
   } else {
     alert("Please select a time!")
@@ -72,8 +67,6 @@ const startTimer = () => {
 const pauseTimer = () => {
   playButton.style.display = "block";
   pauseButton.style.display = "none";
-  playButton.style.opacity = "0.1";
-  resetButton.style.opacity = "0.1";
   timerChangeSettings.style.display = "flex";
   clearInterval(movingTime);
   timeMinutes.innerHTML = minutes;
@@ -83,13 +76,12 @@ const pauseTimer = () => {
 const resetTimer = () => {
   playButton.style.display = "block";
   pauseButton.style.display = "none";
-  playButton.style.opacity = "0.1";
-  resetButton.style.opacity = "0.1";
   timerChangeSettings.style.display = "flex";
   clearInterval(movingTime);
   timeSeconds.innerHTML = "00";
   timeMinutes.innerHTML = "00";
   time = 0;
+  document.querySelector("title").innerHTML = "Custom-Pomodoro";
 };
 
 playButton.addEventListener("click", startTimer);

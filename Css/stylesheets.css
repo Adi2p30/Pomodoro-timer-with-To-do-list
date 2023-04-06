@@ -40,7 +40,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.25rem, -5.75rem + 140vw, 3rem);
+  font-size: clamp(0.625rem, -3.9583rem + 133.3333vw, 1.875rem);
   font-family: "Tilt Warp", cursive;
 }
 
@@ -121,7 +121,7 @@ h4 {
   -o-user-drag: none;
 }
 .header-container img:hover {
-  opacity: 1;
+  scale: 80%;
 }
 .header-container__middle {
   display: flex;

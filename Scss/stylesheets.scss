@@ -34,7 +34,7 @@ h1 {
 }
 
 h2 {
-  font-size: $fs-title;
+  font-size: $fs-large-text;
   font-family: "Tilt Warp", cursive;
 }
 
@@ -114,8 +114,8 @@ h4 {
     opacity: 0.1;
     @include disable-drag;
 
-    &:hover {
-      opacity: 1;
+    &:hover{
+      scale: 80%;
     }
   }
 
