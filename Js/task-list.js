@@ -12,7 +12,7 @@ const createTask = () => {
     listItem.appendChild(task);
     ul.appendChild(listItem);
     task.innerHTML = taskValue.value;
-    listItem.classList.add("tasklist-li", "color");
+    listItem.classList.add("tasklist-li", "color", "task-opacity");
     listItem.style.color = color;
     taskValue.value = "";
   }
