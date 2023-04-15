@@ -27,6 +27,8 @@ const openNavBar = () => {
 
 const settingsButton = document.querySelector("#settings-button")
 const settingsTab = document.querySelector("#settings-background")
+const closeSettingsButton = document.querySelector("#close-settings-button")
+
 var i = 0;
 
 settingsButton.addEventListener("click", ()=> {
@@ -39,4 +41,8 @@ settingsButton.addEventListener("click", ()=> {
   } else {
     alert("you got a bug, tell Rixen!")
   }
+})
+
+closeSettingsButton.addEventListener("click", () =>{
+  settingsTab.style.display = "none"
 })
