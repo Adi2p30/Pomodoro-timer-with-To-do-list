@@ -59,71 +59,75 @@
             </ul>
           </div>
         </nav>
-        <div class="content-tinted-background">
-          <div class="container">
-            <div class="open-nav-bar-container">
-              <a
-                class="open-nav-bar-button"
-                onclick="openNavBar()"
-                style="-webkit-user-select: none; -webkit-user-drag: none"
-                ><img
-                  id="nav-open-button"
-                  src="./Control-images/down-arrow-jetblack.png"
-                  alt=""
-              /></a>
-            </div>
+        <div class="container">
+          <div class="open-nav-bar-container">
+            <a
+              class="open-nav-bar-button"
+              onclick="openNavBar()"
+              style="-webkit-user-select: none; -webkit-user-drag: none"
+              ><img
+                id="nav-open-button"
+                src="./Control-images/down-arrow-jetblack.png"
+                alt=""
+            /></a>
           </div>
+        </div>
 
-          <section>
-            <div class="header-container">
-              <div class="header-container__left">
-                <img
-                  id="reset"
-                  class="control-buttons"
-                  src="./Control-images/Reset-jetblack.png"
-                  alt=""
-                />
+        <div class="content-container">
+          <section id="first" class="first-section">
+              <div class="header-container">
+                <div class="header-container__left">
+                  <img
+                    id="reset"
+                    class="control-buttons"
+                    src="./Control-images/Reset-jetblack.png"
+                    alt=""
+                  />
+                </div>
+                <div class="header-container__middle">
+                  <p class="time-number color" id="timer-number-min">25</p>
+                  <h2 class="timer-gap color">:</h2>
+                  <p class="time-number color" id="timer-number-sec">00</p>
+                </div>
+                <div class="header-container__right">
+                  <img
+                    id="start"
+                    class="control-buttons"
+                    style="display: block"
+                    src="./Control-images/Play-jetblack.png"
+                    alt=""
+                  />
+                  <img
+                    id="pause"
+                    class="control-buttons"
+                    style="display: none"
+                    src="./Control-images/Pause-jetblack.png"
+                    alt=""
+                  />
+                </div>
               </div>
-              <div class="header-container__middle">
-                <p class="time-number color" id="timer-number-min">25</p>
-                <h2 class="timer-gap color">:</h2>
-                <p class="time-number color" id="timer-number-sec">00</p>
-              </div>
-              <div class="header-container__right">
-                <img
-                  id="start"
-                  class="control-buttons"
-                  style="display: block"
-                  src="./Control-images/Play-jetblack.png"
-                  alt=""
-                />
-                <img
-                  id="pause"
-                  class="control-buttons"
-                  style="display: none"
-                  src="./Control-images/Pause-jetblack.png"
-                  alt=""
-                />
-              </div>
-            </div>
           </section>
-          <nav class="timer-settings-list">
-            <ul class="timer-settings-list__ul">
-              <li id="5-timer" class="timer-settings-list__li color">05:00</li>
-              <li id="10-timer" class="timer-settings-list__li color">10:00</li>
-              <li id="15-timer" class="timer-settings-list__li color">15:00</li>
-              <li id="20-timer" class="timer-settings-list__li color">20:00</li>
-              <li id="25-timer" class="timer-settings-list__li color">25:00</li>
-              <li id="30-timer" class="timer-settings-list__li color">30:00</li>
-              <li id="35-timer" class="timer-settings-list__li color">35:00</li>
-              <li id="40-timer" class="timer-settings-list__li color">40:00</li>
-              <li id="45-timer" class="timer-settings-list__li color">45:00</li>
-              <li id="50-timer" class="timer-settings-list__li color">50:00</li>
-              <li id="55-timer" class="timer-settings-list__li color">55:00</li>
-              <li id="60-timer" class="timer-settings-list__li color">60:00</li>
-            </ul>
-          </nav>
-          <section class="tasklist-section">
+
+          <section id="second" class="second-section">
+            <nav class="timer-settings-list">
+              <ul class="timer-settings-list__ul">
+                <li id="5-timer" class="timer-settings-list__li color">05:00</li>
+                <li id="10-timer" class="timer-settings-list__li color">10:00</li>
+                <li id="15-timer" class="timer-settings-list__li color">15:00</li>
+                <li id="20-timer" class="timer-settings-list__li color">20:00</li>
+                <li id="25-timer" class="timer-settings-list__li color">25:00</li>
+                <li id="30-timer" class="timer-settings-list__li color">30:00</li>
+                <li id="35-timer" class="timer-settings-list__li color">35:00</li>
+                <li id="40-timer" class="timer-settings-list__li color">40:00</li>
+                <li id="45-timer" class="timer-settings-list__li color">45:00</li>
+                <li id="50-timer" class="timer-settings-list__li color">50:00</li>
+                <li id="55-timer" class="timer-settings-list__li color">55:00</li>
+                <li id="60-timer" class="timer-settings-list__li color">60:00</li>
+              </ul>
+            </nav>
+          </section>
+
+          <section id="third" class="tasklist-section third-section">
             <div class="tasklist-title-container">
               <div class="tasklist-title">
                 <h3 class="color text-opacity">To do list</h3>
@@ -246,8 +250,8 @@
             </h4>
             <div class="settings-container-segment__row">
               <pre class="settings-container__pre text-opacity">Timer-position:</pre>
-              <p class="timer-position-settings__centre text-opacity">Centre</p>
-              <p class="timer-position-settings__top text-opacity">Top</p>
+              <a id="position-center" class="timer-position-settings__centre text-opacity">Centre</a>
+              <a id="position-top" class="timer-position-settings__top text-opacity">Top</a>
             </div>
           </div>
         </div>
@@ -261,3 +265,4 @@
 <script src="./js/timer.js"></script>
 <script src="./js/timer-changer.js"></script>
 <script src="./js/slider-change.js"></script>
+<script src="./js/timer-position.js"></script>

@@ -380,10 +380,14 @@ input {
 
 .timer-position-settings__centre {
   font-weight: 400;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .timer-position-settings__top {
   font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .settings-title-container {
@@ -407,6 +411,26 @@ input {
 }
 .settings-title-container__button-image:hover {
   scale: 0.8;
+}
+
+.content-container {
+  display: grid;
+  grid-template-rows: [first] auto [second] auto [third] auto;
+}
+
+.first-section {
+  display: grid;
+  grid-row: first/second;
+}
+
+.second-section {
+  display: grid;
+  grid-row: second/third;
+}
+
+.third-section {
+  display: grid;
+  grid-row: third/third;
 }
 
 @media only screen and (max-width: 950px) {

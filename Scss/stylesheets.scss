@@ -358,9 +358,13 @@ input {
 
 .timer-position-settings__centre{
   font-weight: $fw-normal;
+  color: #ffffff;
+  cursor: pointer;
 }
 .timer-position-settings__top{
   font-weight: $fw-bold;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .settings-title-container{
@@ -389,6 +393,26 @@ input {
       }
     }
   }
+}
+
+.content-container{
+  display: grid;
+  grid-template-rows: [first]auto [second]auto [third]auto;
+}
+
+.first-section{
+  display: grid;
+  grid-row: first/second;
+}
+
+.second-section{
+  display: grid;
+  grid-row: second/third;
+}
+
+.third-section{
+  display: grid;
+  grid-row: third/third;
 }
 
 @media only screen and (max-width: 950px) {
